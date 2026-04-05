@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="571.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Arpita.addNewCarController">
+   <children>
+      <Text layoutX="253.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Car" wrappingWidth="256.4781799316406">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Text>
+      <Label fx:id="ComponentLable" layoutX="68.0" layoutY="80.0" prefHeight="81.0" prefWidth="178.0" text="Components:" />
+      <Label layoutX="66.0" layoutY="179.0" text="Brand:" />
+      <Label layoutX="66.0" layoutY="218.0" prefHeight="18.0" prefWidth="60.0" text="Model:" />
+      <Label layoutX="66.0" layoutY="269.0" prefHeight="18.0" prefWidth="50.0" text="Year:" />
+      <Label layoutX="66.0" layoutY="316.0" prefHeight="18.0" prefWidth="60.0" text="Engine CC:" />
+      <Label layoutX="69.0" layoutY="364.0" text="Price" />
+      <Label layoutX="68.0" layoutY="422.0" text="Mileage" />
+      <TextField fx:id="brandTF" layoutX="144.0" layoutY="175.0" />
+      <TextField fx:id="modelTF" layoutX="144.0" layoutY="214.0" />
+      <TextField fx:id="yearTF" layoutX="144.0" layoutY="265.0" />
+      <TextField fx:id="engineccTF" layoutX="144.0" layoutY="313.0" />
+      <TextField fx:id="priceTF" layoutX="144.0" layoutY="360.0" />
+      <TextField fx:id="mileageTF" layoutX="144.0" layoutY="418.0" />
+      <Button layoutX="355.0" layoutY="501.0" mnemonicParsing="false" onAction="#saveButton" prefHeight="26.0" prefWidth="98.0" text="Save" />
+      <Button layoutX="484.0" layoutY="501.0" mnemonicParsing="false" onAction="#goBackButton" prefHeight="26.0" prefWidth="98.0" text="Back" />
+   </children>
+</AnchorPane>

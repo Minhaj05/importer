@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="494.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Arpita.generateSalesInvoiceController">
+   <children>
+      <Text layoutX="251.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Generate Sales Invoice">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="invoiceTA" layoutX="51.0" layoutY="166.0" prefHeight="200.0" prefWidth="200.0" promptText="Invoice" />
+      <Button layoutX="51.0" layoutY="104.0" mnemonicParsing="false" onAction="#generateInvoiceButton" text="Generate Invoice" />
+      <Button layoutX="261.0" layoutY="426.0" mnemonicParsing="false" onAction="#printButton" prefHeight="26.0" prefWidth="128.0" text="Print" />
+      <Button layoutX="468.0" layoutY="426.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="140.0" text="Back" />
+   </children>
+</AnchorPane>

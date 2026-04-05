@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class FileHelper {
 
     // CAR SAVE
-    public static void saveCars(ArrayList<Car> list) {
+    public static void saveCars(ArrayList<com.example.reconditionedcarimporter.car> list) {
         try {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("car.dat"));
             oos.writeObject(list);
