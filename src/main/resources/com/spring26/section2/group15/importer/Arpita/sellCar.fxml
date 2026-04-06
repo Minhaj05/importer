@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="515.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Arpita.sellCarController">
+   <children>
+      <TableView fx:id="sellCarTV" layoutX="46.0" layoutY="172.0" prefHeight="200.0" prefWidth="632.0">
+        <columns>
+          <TableColumn fx:id="bookingIDTC" prefWidth="97.60004425048828" text="Booking ID" />
+          <TableColumn fx:id="customerNameTC" prefWidth="139.99993896484375" text="Customer Name" />
+            <TableColumn fx:id="carModelTC" prefWidth="104.79998779296875" text="Car Model" />
+            <TableColumn fx:id="priceTC" prefWidth="127.19998168945312" text="Price" />
+            <TableColumn fx:id="statusTC" prefWidth="162.4000244140625" text="Status" />
+        </columns>
+      </TableView>
+      <Text layoutX="311.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sell Car">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="397.0" layoutY="446.0" mnemonicParsing="false" onAction="#confirmSaleButton" text="Confirm Sale" />
+      <Button layoutX="536.0" layoutY="446.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+   </children>
+</AnchorPane>

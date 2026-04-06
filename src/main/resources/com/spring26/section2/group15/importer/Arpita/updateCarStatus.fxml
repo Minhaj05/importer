@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="529.0" prefWidth="747.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Arpita.updateCarStatusController">
+   <children>
+      <Text layoutX="249.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Car Status">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="updateCarStatusTV" layoutX="39.0" layoutY="111.0" prefHeight="200.0" prefWidth="664.0">
+        <columns>
+          <TableColumn fx:id="carIDTC" prefWidth="204.8000259399414" text="Car ID" />
+          <TableColumn fx:id="brandTC" prefWidth="124.79995727539062" text="Brand" />
+            <TableColumn fx:id="modelTC" prefWidth="143.99996948242188" text="Model" />
+            <TableColumn fx:id="status" prefWidth="191.99993896484375" text="Status" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="statusCB" layoutX="123.0" layoutY="338.0" prefWidth="150.0" />
+      <Button layoutX="394.0" layoutY="436.0" mnemonicParsing="false" onAction="#updateStatusButton" prefHeight="26.0" prefWidth="150.0" text="Update Status" />
+      <Button layoutX="562.0" layoutY="436.0" mnemonicParsing="false" onAction="#backButton" prefHeight="26.0" prefWidth="141.0" text="Back" />
+      <Label layoutX="39.0" layoutY="342.0" text="Select Status" />
+   </children>
+</AnchorPane>

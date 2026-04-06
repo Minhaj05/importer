@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="518.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Arpita.viewInventoryListController">
+   <children>
+      <Text layoutX="189.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Inventory List" wrappingWidth="281.86871337890625">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="invertoryListTV" layoutX="30.0" layoutY="126.0" prefHeight="200.0" prefWidth="635.0">
+        <columns>
+          <TableColumn fx:id="carIDTC" prefWidth="104.00000381469727" text="CarID" />
+          <TableColumn fx:id="brandTC" prefWidth="107.20001220703125" text="Brand" />
+            <TableColumn fx:id="modelTC" prefWidth="103.19993591308594" text="Model" />
+            <TableColumn fx:id="yearTC" prefWidth="120.0" text="Year" />
+            <TableColumn fx:id="statusTC" prefWidth="84.79998779296875" text="Status" />
+            <TableColumn fx:id="priceTC" prefWidth="120.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button layoutX="438.0" layoutY="411.0" mnemonicParsing="false" onAction="#backButton" prefHeight="70.0" prefWidth="203.0" text="Back" />
+   </children>
+</AnchorPane>
