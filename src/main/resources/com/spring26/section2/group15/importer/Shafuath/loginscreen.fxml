@@ -8,32 +8,31 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="474.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.ShafuathCONTROLLER_">
+<AnchorPane prefHeight="474.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.loginscreenCONTROLLER_">
    <children>
-      <Label layoutX="282.0" layoutY="40.0" text="Customer login">
+      <Label fx:id="titleLabel" layoutX="282.0" layoutY="40.0" text="Customer login">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField layoutX="204.0" layoutY="162.0" prefHeight="31.0" prefWidth="269.0" />
+      <TextField fx:id="emailField" layoutX="204.0" layoutY="162.0" prefHeight="31.0" prefWidth="269.0" />
       <Text layoutX="131.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <PasswordField layoutX="204.0" layoutY="237.0" prefHeight="31.0" prefWidth="269.0" />
+      <PasswordField fx:id="passwordField" layoutX="204.0" layoutY="237.0" prefHeight="31.0" prefWidth="269.0" />
       <Text layoutX="116.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
          <font>
             <Font size="17.0" />
          </font>
       </Text>
-      <Button layoutX="359.0" layoutY="310.0" mnemonicParsing="false" text="Login">
+      <Button fx:id="loginBtn" layoutX="359.0" layoutY="310.0" mnemonicParsing="false" text="Login">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button layoutX="350.0" layoutY="378.0" mnemonicParsing="false" text="Ragister">
+      <Button fx:id="registerBtn" layoutX="350.0" layoutY="378.0" mnemonicParsing="false" text="Ragister">
          <font>
             <Font size="16.0" />
          </font>

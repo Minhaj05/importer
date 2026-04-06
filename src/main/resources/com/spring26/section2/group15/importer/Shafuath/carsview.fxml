@@ -5,22 +5,27 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.carsviewCONTROLLER">
+<AnchorPane prefHeight="572.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.carsviewCONTROLLER">
    <children>
-      <TableView prefHeight="341.0" prefWidth="603.0">
+      <TableView fx:id="carTable" layoutY="130.0" prefHeight="341.0" prefWidth="708.0">
         <columns>
-          <TableColumn prefWidth="165.0" text=" Brand Name" />
-          <TableColumn prefWidth="158.0" text="Model" />
-            <TableColumn prefWidth="152.0" text="Price" />
-            <TableColumn prefWidth="124.0" text="Status" />
+          <TableColumn fx:id="brandnameCol" prefWidth="165.0" text=" Brand Name" />
+          <TableColumn fx:id="modelCol" prefWidth="158.0" text="Model" />
+            <TableColumn fx:id="priceCol" prefWidth="192.0" text="Price" />
+            <TableColumn fx:id="statusCol" prefWidth="192.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="262.0" layoutY="348.0" mnemonicParsing="false" text="Refresh">
+      <Button fx:id="refreshbutton" layoutX="315.0" layoutY="491.0" mnemonicParsing="false" text="Refresh">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
+      <Text layoutX="300.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW CARS">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
