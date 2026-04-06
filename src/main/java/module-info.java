@@ -5,4 +5,6 @@ module com.spring26.section2.group15.importer {
 
     opens com.spring26.section2.group15.importer to javafx.fxml;
     exports com.spring26.section2.group15.importer;
+    exports com.spring26.section2.group15.importer.Shafuath;
+    opens com.spring26.section2.group15.importer.Shafuath to javafx.fxml;
 }
