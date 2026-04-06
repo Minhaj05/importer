@@ -17,14 +17,14 @@
             <TableColumn fx:id="statusCol" prefWidth="192.0" text="Status" />
         </columns>
       </TableView>
-      <Button fx:id="refreshbutton" layoutX="315.0" layoutY="491.0" mnemonicParsing="false" text="Refresh">
+      <Button layoutX="315.0" layoutY="491.0" mnemonicParsing="false" onAction="#refreshbutton" text="Refresh">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
       <Text layoutX="300.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIEW CARS">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Text>
    </children>
