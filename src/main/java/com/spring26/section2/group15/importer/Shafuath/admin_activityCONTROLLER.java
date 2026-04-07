@@ -2,16 +2,14 @@ package com.spring26.section2.group15.importer.Shafuath;
 
 import javafx.scene.control.TableColumn;
 
-public class purchase_historyCONTROLLER
+public class admin_activityCONTROLLER
 {
     @javafx.fxml.FXML
-    private TableColumn priceClo;
+    private TableColumn userClm;
     @javafx.fxml.FXML
-    private TableColumn purchaseidClo;
+    private TableColumn timeClm;
     @javafx.fxml.FXML
-    private TableColumn carnameClo;
-    @javafx.fxml.FXML
-    private TableColumn dateClo;
+    private TableColumn actionClm;
 
     @javafx.fxml.FXML
     public void initialize() {
