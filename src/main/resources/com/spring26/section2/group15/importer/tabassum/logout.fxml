@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.logoutcontroller">
    <children>
-      <Label layoutX="221.0" layoutY="34.0" text="Logout" textFill="#1e942b">
+      <Label fx:id="logoutlab" layoutX="221.0" layoutY="34.0" text="Logout" textFill="#1e942b">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="31.0" />
          </font>
@@ -17,7 +17,7 @@
             <Font name="Bauhaus 93" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="181.0" layoutY="188.0" mnemonicParsing="false" text="YES">
+      <Button layoutX="181.0" layoutY="188.0" mnemonicParsing="false" onAction="#yes" text="YES">
          <font>
             <Font name="Bodoni MT" size="12.0" />
          </font>
