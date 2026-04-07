@@ -13,17 +13,17 @@
    <children>
       <Label layoutX="161.0" layoutY="14.0" text="Record Payment">
          <font>
-            <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+            <Font name="Berlin Sans FB Demi Bold" size="35.00" />
          </font>
       </Label>
       <Label layoutX="138.0" layoutY="109.0" text="Customer Name:">
          <font>
-            <Font name="Britannic Bold" size="12.0" />
+            <Font name="Britannic Bold" size="12.00" />
          </font>
       </Label>
       <Label layoutX="179.0" layoutY="151.0" text="Amount:">
          <font>
-            <Font name="Britannic Bold" size="12.0" />
+            <Font name="Britannic Bold" size="12.00" />
          </font>
       </Label>
       <Label layoutX="85.0" layoutY="254.0" text="Payment Method:" />
