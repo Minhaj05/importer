@@ -12,7 +12,7 @@
    <children>
       <Label fx:id="titleLabel" layoutX="282.0" layoutY="40.0" text="Customer login">
          <font>
-            <Font size="30.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
       </Label>
       <TextField fx:id="emailField" layoutX="204.0" layoutY="162.0" prefHeight="31.0" prefWidth="269.0" />
@@ -27,12 +27,12 @@
             <Font size="17.0" />
          </font>
       </Text>
-      <Button fx:id="loginBtn" layoutX="359.0" layoutY="310.0" mnemonicParsing="false" text="Login">
+      <Button layoutX="359.0" layoutY="310.0" mnemonicParsing="false" onAction="#loginBtn" text="Login">
          <font>
             <Font size="16.0" />
          </font>
       </Button>
-      <Button fx:id="registerBtn" layoutX="350.0" layoutY="378.0" mnemonicParsing="false" text="Ragister">
+      <Button layoutX="350.0" layoutY="378.0" mnemonicParsing="false" onAction="#registerBtn" text="Ragister">
          <font>
             <Font size="16.0" />
          </font>

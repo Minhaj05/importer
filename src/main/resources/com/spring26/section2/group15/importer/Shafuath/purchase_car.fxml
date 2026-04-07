@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.purchase_carCONTROLLER">
+   <children>
+      <Label fx:id="totalbill" layoutX="253.0" layoutY="42.0" text="Total Bill">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="PaymentTypeCombo" layoutX="203.0" layoutY="169.0" prefHeight="31.0" prefWidth="230.0" />
+      <Label layoutX="75.0" layoutY="174.0" text=" Payment Type">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="236.0" layoutY="305.0" mnemonicParsing="false" onAction="#conformPayment" text="Conform Payment" />
+   </children>
+</AnchorPane>

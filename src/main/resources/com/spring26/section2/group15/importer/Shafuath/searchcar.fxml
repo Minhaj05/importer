@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.searhcarCONTROLLER">
    <children>
       <TextField fx:id="searchField" layoutX="126.0" layoutY="101.0" prefHeight="31.0" prefWidth="152.0" />
@@ -25,7 +24,7 @@
             <Font size="17.0" />
          </font>
       </Text>
-      <Button fx:id="searchBtn" layoutX="265.0" layoutY="174.0" mnemonicParsing="false" text="Search">
+      <Button fx:id="searchBtn" layoutX="265.0" layoutY="174.0" mnemonicParsing="false" onAction="#searchBtn" text="Search">
          <font>
             <Font size="17.0" />
          </font>
@@ -37,9 +36,9 @@
             <TableColumn fx:id="modelresultTable" prefWidth="227.0" text="Model" />
         </columns>
       </TableView>
-      <Text layoutX="245.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search CAR" textAlignment="CENTER">
+      <Text layoutX="225.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search CAR" textAlignment="CENTER">
          <font>
-            <Font size="22.0" />
+            <Font name="System Bold" size="28.0" />
          </font>
       </Text>
    </children>
