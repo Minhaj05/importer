@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="614.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.generate_invoicecontroller">
+<AnchorPane prefHeight="614.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.generate_invoicecontroller">
    <children>
       <Label layoutX="185.0" layoutY="31.0" text="Generate Invoice" textFill="#239c63">
          <font>
@@ -29,9 +28,9 @@
          </font>
       </Button>
       <TextArea layoutX="139.0" layoutY="400.0" prefHeight="200.0" prefWidth="322.0" />
-      <Label layoutX="233.0" layoutY="358.0" text="Invoice View" textFill="#cc1f21">
+      <Label layoutX="134.0" layoutY="353.0" prefHeight="31.0" prefWidth="131.0" text="Invoice View:" textFill="#cc1f21">
          <font>
-            <Font size="22.0" />
+            <Font size="16.0" />
          </font>
       </Label>
    </children>
