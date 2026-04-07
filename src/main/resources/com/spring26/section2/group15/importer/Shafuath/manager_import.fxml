@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.manager_importCONTROLLER">
+   <children>
+      <Label layoutX="202.0" layoutY="39.0" text="Import Approval">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="importList" layoutX="206.0" layoutY="154.0" prefHeight="31.0" prefWidth="197.0" />
+      <Text layoutX="136.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car List" />
+      <Button layoutX="255.0" layoutY="250.0" mnemonicParsing="false" onAction="#approveBtn" text="Approve ">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="statusLabel" layoutY="323.0" prefHeight="58.0" prefWidth="600.0" />
+   </children>
+</AnchorPane>
