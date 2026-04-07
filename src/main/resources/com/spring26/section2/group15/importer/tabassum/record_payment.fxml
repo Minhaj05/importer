@@ -13,7 +13,7 @@
    <children>
       <Label layoutX="161.0" layoutY="14.0" text="Record Payment">
          <font>
-            <Font name="Berlin Sans FB Demi Bold" size="35.0" />
+            <Font name="Berlin Sans FB Demi Bold" size="35.00" />
          </font>
       </Label>
       <Label layoutX="138.0" layoutY="109.0" text="Customer Name:">
