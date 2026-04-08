@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.admin_activityCONTROLLER">
+   <children>
+      <TableView layoutX="8.0" layoutY="100.0" prefHeight="288.0" prefWidth="589.0">
+        <columns>
+          <TableColumn fx:id="userClm" prefWidth="227.0" text="User" />
+          <TableColumn fx:id="actionClm" prefWidth="207.0" text="Action" />
+            <TableColumn fx:id="timeClm" prefWidth="154.0" text="Time" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
