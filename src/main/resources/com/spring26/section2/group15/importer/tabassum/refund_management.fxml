@@ -7,22 +7,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.refund_managementcontroller">
    <children>
-      <Label layoutX="155.0" layoutY="14.0" text="Refund " textFill="#bf1c70">
+      <Label fx:id="RefundLBL" layoutX="155.0" layoutY="14.0" text="Refund " textFill="#bf1c70">
          <font>
             <Font name="Britannic Bold" size="30.0" />
          </font>
       </Label>
       <Label layoutX="14.0" layoutY="142.0" text="Refund Amount:" />
       <Label layoutX="216.0" layoutY="87.0" text="Reason:" />
-      <Button layoutX="133.0" layoutY="338.0" mnemonicParsing="false" text="Process Refund" textFill="#860c0c">
+      <Button layoutX="133.0" layoutY="338.0" mnemonicParsing="false" onAction="#ProcessRefundButton" text="Process Refund" textFill="#860c0c">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <TextField layoutX="12.0" layoutY="174.0" />
-      <TextArea layoutX="207.0" layoutY="119.0" prefHeight="200.0" prefWidth="200.0" />
+      <TextField fx:id="RefundAmountTF" layoutX="12.0" layoutY="174.0" />
+      <TextArea fx:id="ReasonTA" layoutX="207.0" layoutY="119.0" prefHeight="200.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

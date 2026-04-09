@@ -7,24 +7,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.payment_historycontroller">
    <children>
-      <Label layoutX="276.0" layoutY="23.0" text="Payment History" textFill="#416b33">
+      <Label fx:id="PaymentHistoryLBL" layoutX="276.0" layoutY="23.0" text="Payment History" textFill="#416b33">
          <font>
             <Font name="Britannic Bold" size="22.0" />
          </font>
       </Label>
       <TableView layoutX="18.0" layoutY="81.0" prefHeight="200.0" prefWidth="694.0">
          <columns>
-            <TableColumn prefWidth="138.39998817443848" text="Payment ID" />
-            <TableColumn prefWidth="137.60003662109375" text="Customer Name" />
-            <TableColumn prefWidth="134.4000244140625" text="Amount" />
-            <TableColumn prefWidth="134.40005493164062" text="Date" />
-            <TableColumn prefWidth="150.39996337890625" text="Status" />
+            <TableColumn fx:id="PaymentIdTC" prefWidth="138.39998817443848" text="Payment ID" />
+            <TableColumn fx:id="customerNameTC" prefWidth="137.60003662109375" text="Customer Name" />
+            <TableColumn fx:id="AmountTC" prefWidth="134.4000244140625" text="Amount" />
+            <TableColumn fx:id="DateTC" prefWidth="134.40005493164062" text="Date" />
+            <TableColumn fx:id="StatusTC" prefWidth="150.39996337890625" text="Status" />
          </columns>
       </TableView>
-      <Button layoutX="303.0" layoutY="309.0" mnemonicParsing="false" text="View Details " textFill="#767229">
+      <Button layoutX="303.0" layoutY="309.0" mnemonicParsing="false" onAction="#ViewDetailsButton" text="View Details " textFill="#767229">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

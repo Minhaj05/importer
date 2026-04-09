@@ -10,17 +10,17 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.create_import_requestcontroller">
    <children>
-      <TextField layoutX="144.0" layoutY="106.0" />
-      <TextField layoutX="144.0" layoutY="150.0" />
-      <DatePicker layoutX="144.0" layoutY="250.0" />
-      <ComboBox layoutX="144.0" layoutY="205.0" prefWidth="150.0" />
+      <TextField fx:id="sourceCountryTF" layoutX="144.0" layoutY="106.0" />
+      <TextField fx:id="quantityTF" layoutX="144.0" layoutY="150.0" />
+      <DatePicker fx:id="importDateDP" layoutX="144.0" layoutY="250.0" />
+      <ComboBox fx:id="carTypeCB" layoutX="144.0" layoutY="205.0" prefWidth="150.0" />
       <Label layoutX="45.0" layoutY="110.0" text="Source Country:" />
       <Label layoutX="45.0" layoutY="154.0" text="Quantity:" />
       <Label layoutX="45.0" layoutY="254.0" text="Import Date:" />
       <Label layoutX="45.0" layoutY="200.0" text="Car Type:" />
-      <Button layoutX="53.0" layoutY="308.0" mnemonicParsing="false" text="Submit" textFill="#c12222" />
-      <Button layoutX="187.0" layoutY="308.0" mnemonicParsing="false" text="Reset" textFill="#ac1919" />
-      <Label layoutX="80.0" layoutY="21.0" text="Create Import Request" textFill="#7b2b2b">
+      <Button layoutX="53.0" layoutY="308.0" mnemonicParsing="false" onAction="#submitButton" text="Submit" textFill="#c12222" />
+      <Button layoutX="187.0" layoutY="308.0" mnemonicParsing="false" onAction="#resetButton" text="Reset" textFill="#ac1919" />
+      <Label fx:id="CreateImportRequestLBL" layoutX="80.0" layoutY="21.0" text="Create Import Request" textFill="#7b2b2b">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
