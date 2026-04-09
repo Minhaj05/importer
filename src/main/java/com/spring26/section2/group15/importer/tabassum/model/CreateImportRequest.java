@@ -47,4 +47,14 @@ public class CreateImportRequest {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "CreateImportRequest{" +
+                "id=" + id +
+                ", carModel='" + carModel + '\'' +
+                ", quantity=" + quantity +
+                ", status='" + status + '\'' +
+                '}';
+    }
 }
