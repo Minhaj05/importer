@@ -22,5 +22,6 @@ public class manager_salesCONTROLLER
 
     @javafx.fxml.FXML
     public void generateBtn(ActionEvent actionEvent) {
+
     }
 }
