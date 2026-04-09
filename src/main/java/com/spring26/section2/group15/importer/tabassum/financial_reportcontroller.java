@@ -5,14 +5,14 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
-public class generate_reportcontroller
+public class financial_reportcontroller
 {
     @javafx.fxml.FXML
-    private Label ImportReportLBL;
+    private Label FinancialReportLBL;
+    @javafx.fxml.FXML
+    private TextArea GeneratedReportTA;
     @javafx.fxml.FXML
     private DatePicker ToDateDP;
-    @javafx.fxml.FXML
-    private TextArea ReportShowTA;
     @javafx.fxml.FXML
     private DatePicker FromDateDP;
 
@@ -21,6 +21,6 @@ public class generate_reportcontroller
     }
 
     @javafx.fxml.FXML
-    public void GenerateButton(ActionEvent actionEvent) {
+    public void generateButton(ActionEvent actionEvent) {
     }
 }

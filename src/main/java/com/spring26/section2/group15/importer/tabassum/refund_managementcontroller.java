@@ -2,24 +2,23 @@ package com.spring26.section2.group15.importer.tabassum;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class update_import_costcontroller
+public class refund_managementcontroller
 {
     @javafx.fxml.FXML
-    private TextField TaxTF;
+    private TextArea ReasonTA;
     @javafx.fxml.FXML
-    private TextField ShippingCostTF;
+    private TextField RefundAmountTF;
     @javafx.fxml.FXML
-    private Label UpdateImportCostLBL;
-    @javafx.fxml.FXML
-    private TextField TotalCostTF;
+    private Label RefundLBL;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void UpdateButton(ActionEvent actionEvent) {
+    public void ProcessRefundButton(ActionEvent actionEvent) {
     }
 }
