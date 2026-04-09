@@ -2,7 +2,7 @@ package com.spring26.section2.group15.importer.Minhaj;
 
 import javafx.event.ActionEvent;
 
-public class CustomerDashboard
+public class Customer_Logout
 {
     @javafx.fxml.FXML
     public void initialize() {
