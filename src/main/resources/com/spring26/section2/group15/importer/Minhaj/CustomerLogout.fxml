@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Minhaj.Customer_Logout">
+   <children>
+      <Label layoutX="253.0" layoutY="27.0" prefHeight="33.0" prefWidth="91.0" text="Logout" textFill="#1d7fd4">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="135.0" prefHeight="27.0" prefWidth="132.0" text="Are You Sure ?" textFill="#960000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="141.0" layoutY="216.0" mnemonicParsing="false" onAction="#yesOnClick" text="Yes" />
+      <Button layoutX="404.0" layoutY="216.0" mnemonicParsing="false" onAction="#NoOnClick" text="No" />
+   </children>
+</AnchorPane>

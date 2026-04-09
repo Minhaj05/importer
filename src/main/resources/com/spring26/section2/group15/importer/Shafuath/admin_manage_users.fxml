@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="710.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.admin_manage_usersCONTROLLER">
    <children>
       <Label fx:id="titleLabel" layoutX="232.0" layoutY="36.0" text="Manage User">
@@ -20,7 +19,7 @@
       <TextField fx:id="usernameField" layoutX="207.0" layoutY="114.0" />
       <Label layoutX="123.0" layoutY="119.0" text="Username" />
       <TextField fx:id="emailField" layoutX="207.0" layoutY="169.0" />
-      <Label layoutX="135.0" layoutY="174.0" text="Mail" />
+      <Label layoutX="135.0" layoutY="174.0" text="email" />
       <ComboBox fx:id="roleComBox" layoutX="207.0" layoutY="235.0" prefHeight="31.0" prefWidth="187.0" />
       <Label layoutX="135.0" layoutY="240.0" text="Role" />
       <Button layoutX="116.0" layoutY="340.0" mnemonicParsing="false" onAction="#adduserBtn" text="Add User" />
