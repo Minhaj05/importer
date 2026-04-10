@@ -14,7 +14,7 @@
             <Font name="Britannic Bold" size="22.0" />
          </font>
       </Label>
-      <TableView layoutX="18.0" layoutY="81.0" prefHeight="200.0" prefWidth="694.0">
+      <TableView fx:id="PaymentHistoryTV" layoutX="18.0" layoutY="81.0" prefHeight="200.0" prefWidth="694.0">
          <columns>
             <TableColumn fx:id="PaymentIdTC" prefWidth="138.39998817443848" text="Payment ID" />
             <TableColumn fx:id="customerNameTC" prefWidth="137.60003662109375" text="Customer Name" />

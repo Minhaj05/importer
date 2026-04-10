@@ -14,9 +14,9 @@ public class generate_invoicecontroller
     @javafx.fxml.FXML
     private TableColumn SaleIdTC;
     @javafx.fxml.FXML
-    private Label GenerateInvoiceLBL;
-    @javafx.fxml.FXML
     private TableColumn CustomerTC;
+    @javafx.fxml.FXML
+    private TableView GenerateInvoiceTV;
 
     @javafx.fxml.FXML
     public void initialize() {

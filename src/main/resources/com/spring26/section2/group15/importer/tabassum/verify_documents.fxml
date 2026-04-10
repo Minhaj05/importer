@@ -10,12 +10,12 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.verify_documentscontroller">
    <children>
-      <Label fx:id="VerifyDocumentsLBL" layoutX="178.0" layoutY="21.0" text="Verify Documents" textFill="#7b2a2a">
+      <Label layoutX="178.0" layoutY="21.0" text="Verify Documents" textFill="#7b2a2a">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </Label>
-      <TableView layoutX="92.0" layoutY="84.0" prefHeight="200.0" prefWidth="403.0">
+      <TableView fx:id="VerifyDocumentsTV" layoutX="92.0" layoutY="84.0" prefHeight="200.0" prefWidth="403.0">
         <columns>
           <TableColumn fx:id="DocumentIdTC" prefWidth="155.20001220703125" text="Document ID" />
           <TableColumn fx:id="TypeTC" prefWidth="119.20001220703125" text="Type " />
