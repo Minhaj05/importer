@@ -24,4 +24,5 @@ public class accountant_logoutcontroller
     @javafx.fxml.FXML
     public void YesButton(ActionEvent actionEvent) {
     }
+
 }
