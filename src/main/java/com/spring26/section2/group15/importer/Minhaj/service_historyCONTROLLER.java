@@ -4,25 +4,19 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class customer_view_carsCONTROLLER
+public class service_historyCONTROLLER
 {
     @javafx.fxml.FXML
-    private TableView carlistTableView;
+    private TableView historyTable;
     @javafx.fxml.FXML
-    private TableColumn carlistTableCol;
+    private TableColumn statusCol;
     @javafx.fxml.FXML
-    private TableColumn modelTableCol;
+    private TableColumn carCol;
     @javafx.fxml.FXML
-    private TableColumn priceTableCol;
-    @javafx.fxml.FXML
-    private TableColumn brandTableCol;
+    private TableColumn serviceDateCol;
 
     @javafx.fxml.FXML
     public void initialize() {
-    }
-
-    @javafx.fxml.FXML
-    public void BookCarOnclick(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -38,4 +32,5 @@ public class customer_view_carsCONTROLLER
 
         stage.setScene(new javafx.scene.Scene(root));
     }
+
 }

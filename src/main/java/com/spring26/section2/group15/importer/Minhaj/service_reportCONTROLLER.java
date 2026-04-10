@@ -1,32 +1,24 @@
 package com.spring26.section2.group15.importer.Minhaj;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextArea;
 
-public class customer_view_carsCONTROLLER
+public class service_reportCONTROLLER
 {
     @javafx.fxml.FXML
-    private TableView carlistTableView;
+    private DatePicker formDate;
     @javafx.fxml.FXML
-    private TableColumn carlistTableCol;
+    private DatePicker toDate;
     @javafx.fxml.FXML
-    private TableColumn modelTableCol;
-    @javafx.fxml.FXML
-    private TableColumn priceTableCol;
-    @javafx.fxml.FXML
-    private TableColumn brandTableCol;
+    private TextArea reportShow;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void BookCarOnclick(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void ViewDetailsOnClick(ActionEvent actionEvent) {
+    public void GenerateOnClick(ActionEvent actionEvent) {
     }
     protected void switchScene(String fxml, javafx.event.ActionEvent event) throws Exception {
         javafx.scene.Parent root = javafx.fxml.FXMLLoader.load(

@@ -4,29 +4,19 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class customer_view_carsCONTROLLER
+public class service_readyController
 {
     @javafx.fxml.FXML
-    private TableView carlistTableView;
+    private TableColumn carCol;
     @javafx.fxml.FXML
-    private TableColumn carlistTableCol;
-    @javafx.fxml.FXML
-    private TableColumn modelTableCol;
-    @javafx.fxml.FXML
-    private TableColumn priceTableCol;
-    @javafx.fxml.FXML
-    private TableColumn brandTableCol;
+    private TableView servicedCarTable;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void BookCarOnclick(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void ViewDetailsOnClick(ActionEvent actionEvent) {
+    public void MarkReadyOnlick(ActionEvent actionEvent) {
     }
     protected void switchScene(String fxml, javafx.event.ActionEvent event) throws Exception {
         javafx.scene.Parent root = javafx.fxml.FXMLLoader.load(
