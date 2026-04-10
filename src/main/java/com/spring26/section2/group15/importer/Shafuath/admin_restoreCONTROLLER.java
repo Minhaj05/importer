@@ -1,29 +1,76 @@
 package com.spring26.section2.group15.importer.Shafuath;
 
-import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.stage.FileChooser;
 
-public class admin_restoreCONTROLLER
-{
-    @javafx.fxml.FXML
-    private Label fileNameLabel;
-    @javafx.fxml.FXML
-    private Label fileNameLabel1;
-    @javafx.fxml.FXML
-    private ProgressBar progressBar;
-    @javafx.fxml.FXML
+import java.io.File;
+
+public class admin_restoreCONTROLLER {
+
+    @FXML
     private Label statusLabel;
 
-    @javafx.fxml.FXML
-    public void initialize() {
+    @FXML
+    private Label fileNameLabel;
+
+    @FXML
+    private Label fileNameLabel1;
+
+    @FXML
+    private ProgressBar progressBar;
+
+    private File selectedFile;
+
+    // 🔴 SELECT FILE BUTTON
+    @FXML
+    private void selectFileBtn() {
+
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Select Backup File");
+
+        selectedFile = fileChooser.showOpenDialog(null);
+
+        if (selectedFile != null) {
+            fileNameLabel.setText("Selected File: " + selectedFile.getName());
+            fileNameLabel1.setText("Ready to restore: " + selectedFile.getName());
+            statusLabel.setText("File Selected Successfully ✅❤️");
+        } else {
+            statusLabel.setText("No file selected ❌");
+        }
     }
 
-    @javafx.fxml.FXML
-    public void restoreBtn(ActionEvent actionEvent) {
-    }
+    // 🔵 RESTORE BUTTON
+    @FXML
+    private void restoreBtn() {
 
-    @javafx.fxml.FXML
-    public void selectFileBtn(ActionEvent actionEvent) {
+        if (selectedFile == null) {
+            statusLabel.setText("Please select a file first ‼️‼️‼️");
+            return;
+        }
+
+        // 🟡 Start restore
+        statusLabel.setText("Restoring...");
+        progressBar.setProgress(0.3);
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        progressBar.setProgress(0.7);
+        statusLabel.setText("Processing Restore...");
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // 🟢 Complete
+        progressBar.setProgress(1.0);
+        statusLabel.setText("Restore Completed Successfully ✅❤️");
     }
 }

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="710.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.admin_manage_usersCONTROLLER">
+<AnchorPane prefHeight="736.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.admin_manage_usersCONTROLLER">
    <children>
       <Label fx:id="titleLabel" layoutX="232.0" layoutY="36.0" text="Manage User">
          <font>
@@ -25,7 +25,7 @@
       <Button layoutX="116.0" layoutY="340.0" mnemonicParsing="false" onAction="#adduserBtn" text="Add User" />
       <Button layoutX="249.0" layoutY="340.0" mnemonicParsing="false" onAction="#updateuserBtn" text="Update User" />
       <Button layoutX="406.0" layoutY="340.0" mnemonicParsing="false" onAction="#deleteuserBtn" text="Delete User" />
-      <TableView layoutX="-1.0" layoutY="443.0" prefHeight="200.0" prefWidth="649.0">
+      <TableView fx:id="manager_user_tableview" layoutX="35.0" layoutY="447.0" prefHeight="200.0" prefWidth="649.0">
         <columns>
           <TableColumn fx:id="usernameClm" prefWidth="262.0" text="User Name" />
           <TableColumn fx:id="emailClm" prefWidth="202.0" text="Email" />

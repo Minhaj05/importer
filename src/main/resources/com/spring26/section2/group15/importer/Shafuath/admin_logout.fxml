@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Shafuath.admin_logoutCONTROLLER">
    <children>
       <Label fx:id="messageLabel" layoutX="96.0" layoutY="90.0" text="Are you sure you want to logout?">
@@ -14,7 +13,7 @@
             <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <HBox alignment="CENTER" layoutX="191.0" layoutY="200.0" prefHeight="100.0" prefWidth="200.0">
+      <HBox fx:id="HBox" alignment="CENTER" layoutX="191.0" layoutY="200.0" prefHeight="100.0" prefWidth="200.0">
          <children>
             <Button mnemonicParsing="false" onAction="#yesBtn" text="Yes" />
             <Button mnemonicParsing="false" onAction="#noBtn" text="No" />
