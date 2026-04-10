@@ -10,12 +10,12 @@
 
 <AnchorPane prefHeight="433.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.update_payment_statuscontroller">
    <children>
-      <Label fx:id="UpdatePaymentStatusLBL" layoutX="247.0" layoutY="14.0" text="Update Payment Status" textFill="#904691">
+      <Label layoutX="247.0" layoutY="14.0" text="Update Payment Status" textFill="#904691">
          <font>
             <Font name="Britannic Bold" size="22.0" />
          </font>
       </Label>
-      <TableView layoutX="27.0" layoutY="69.0" prefHeight="200.0" prefWidth="694.0">
+      <TableView fx:id="UpdatePaymentStatusTV" layoutX="27.0" layoutY="69.0" prefHeight="200.0" prefWidth="694.0">
         <columns>
           <TableColumn fx:id="PaymentIdTC" prefWidth="138.39998817443848" text="Payment ID" />
           <TableColumn fx:id="CustomerNameTC" prefWidth="137.60003662109375" text="Customer Name" />

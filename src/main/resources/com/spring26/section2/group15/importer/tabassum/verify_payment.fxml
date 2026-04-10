@@ -9,12 +9,12 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.verify_paymentcontroller">
    <children>
-      <Label fx:id="VerifyPaymentLBL" layoutX="194.0" layoutY="14.0" text="Verify Payment" textFill="#0d57e1">
+      <Label layoutX="194.0" layoutY="14.0" text="Verify Payment" textFill="#0d57e1">
          <font>
             <Font name="Britannic Bold" size="23.0" />
          </font>
       </Label>
-      <TableView layoutX="9.0" layoutY="79.0" prefHeight="200.0" prefWidth="580.0">
+      <TableView fx:id="VerifyPaymentTV" layoutX="9.0" layoutY="79.0" prefHeight="200.0" prefWidth="580.0">
         <columns>
           <TableColumn fx:id="PaymentIdTC" prefWidth="149.5999755859375" text="Payment ID" />
           <TableColumn fx:id="CustomerTC" prefWidth="140.800048828125" text=" Customer" />

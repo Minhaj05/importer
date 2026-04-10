@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.update_import_statuscontroller">
    <children>
-      <TableView layoutX="197.0" layoutY="116.0" prefHeight="200.0" prefWidth="343.0">
+      <TableView fx:id="UpdateImportStatusTV" layoutX="197.0" layoutY="116.0" prefHeight="200.0" prefWidth="343.0">
         <columns>
           <TableColumn fx:id="PendingTC" prefWidth="107.20001983642578" text="Pending" />
           <TableColumn fx:id="ShippedTC" prefWidth="100.0" text="Shipped" />

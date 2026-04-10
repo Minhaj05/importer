@@ -10,12 +10,12 @@
 
 <AnchorPane prefHeight="614.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.generate_invoicecontroller">
    <children>
-      <Label fx:id="GenerateInvoiceLBL" layoutX="185.0" layoutY="31.0" text="Generate Invoice" textFill="#239c63">
+      <Label layoutX="185.0" layoutY="31.0" text="Generate Invoice" textFill="#239c63">
          <font>
             <Font name="Britannic Bold" size="31.0" />
          </font>
       </Label>
-      <TableView layoutX="126.0" layoutY="81.0" prefHeight="200.0" prefWidth="348.0">
+      <TableView fx:id="GenerateInvoiceTV" layoutX="126.0" layoutY="81.0" prefHeight="200.0" prefWidth="348.0">
         <columns>
           <TableColumn fx:id="SaleIdTC" prefWidth="122.4000244140625" text="Sale ID " />
           <TableColumn fx:id="CustomerTC" prefWidth="94.39996337890625" text="Customer" />
