@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="614.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.generate_invoicecontroller">
+   <children>
+      <Label layoutX="185.0" layoutY="31.0" text="Generate Invoice" textFill="#239c63">
+         <font>
+            <Font name="Britannic Bold" size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="GenerateInvoiceTV" layoutX="126.0" layoutY="81.0" prefHeight="200.0" prefWidth="348.0">
+        <columns>
+          <TableColumn fx:id="SaleIdTC" prefWidth="122.4000244140625" text="Sale ID " />
+          <TableColumn fx:id="CustomerTC" prefWidth="94.39996337890625" text="Customer" />
+            <TableColumn fx:id="AmountTC" prefWidth="131.199951171875" text="Amount" />
+        </columns>
+      </TableView>
+      <Button layoutX="219.0" layoutY="294.0" mnemonicParsing="false" onAction="#GenerateInvoiceButton" text="Generate Invoice " textFill="#3f1cd4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="InvoiceViewTA" layoutX="139.0" layoutY="400.0" prefHeight="200.0" prefWidth="322.0" />
+      <Label layoutX="134.0" layoutY="353.0" prefHeight="31.0" prefWidth="131.0" text="Invoice View:" textFill="#cc1f21">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
