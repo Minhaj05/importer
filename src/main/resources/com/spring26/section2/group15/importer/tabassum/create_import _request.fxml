@@ -10,8 +10,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.tabassum.create_import_requestcontroller">
    <children>
-      <TextField fx:id="sourceCountryTF" layoutX="144.0" layoutY="106.0" />
-      <TextField fx:id="quantityTF" layoutX="144.0" layoutY="150.0" />
+      <TextField fx:id="sourceCountryTF" layoutX="144.0" layoutY="106.0" text="Japan" />
+      <TextField fx:id="quantityTF" layoutX="144.0" layoutY="150.0" text="1" />
       <DatePicker fx:id="importDateDP" layoutX="144.0" layoutY="250.0" />
       <ComboBox fx:id="carTypeCB" layoutX="144.0" layoutY="205.0" prefWidth="150.0" />
       <Label layoutX="45.0" layoutY="110.0" text="Source Country:" />

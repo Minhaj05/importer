@@ -1,22 +1,38 @@
 package com.spring26.section2.group15.importer.Shafuath;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class manager_sale_approvalCONTROLLER
-{
-    @javafx.fxml.FXML
-    private TableColumn saleTable;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    @javafx.fxml.FXML
-    public void initialize() {
+public class manager_sale_approvalCONTROLLER implements Initializable {
+
+    @FXML
+    private TableView<SaleRecord> approveSaleTableView;
+
+    @FXML
+    private TableColumn<SaleRecord, String> saleTable;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // Set up the column to read the "sale" property from SaleRecord class
+        saleTable.setCellValueFactory(new PropertyValueFactory<>("sale"));
+
+        // Load sale records into the table on startup
+        loadSaleData();
     }
 
-    @javafx.fxml.FXML
-    public void approveBtn(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void rejectBtn(ActionEvent actionEvent) {
-    }
-}
+    // Load pending sale records into the TableView
+    private void loadSaleData() {
+        ObservableList<SaleRecord> saleList = FXCollections.observableArrayList(
+                // TODO: Replace with real DB query results
+                new SaleRecord("John Doe - Toyota")
