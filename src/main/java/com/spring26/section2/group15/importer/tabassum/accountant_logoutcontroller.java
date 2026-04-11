@@ -1,78 +1,49 @@
 package com.spring26.section2.group15.importer.tabassum;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;    // Correct JavaFX import
+import javafx.scene.control.Label;     // Correct JavaFX import
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class accountant_logoutcontroller {
 
+    @javafx.fxml.FXML
+    private Label AccountantLogoutLBL;
 
-    private Label AccountantLogoutLBL;   // "Accountant Logout" title label
+    @javafx.fxml.FXML
+    private Label AreYouSureLBL;
 
-    private Label AreYouSureLBL;         // "Are You Sure?" label
-
-    private Button AccountantNoBtn;      // "No" button (fix fx:id in FXML too)
-
-
+    @javafx.fxml.FXML
     public void initialize() {
-        // You can set any default values here if needed
-        System.out.println("Accountant Logout Screen Loaded.");
     }
 
-
+    @javafx.fxml.FXML
     public void YesButton(ActionEvent actionEvent) {
         try {
-            // Load the Login screen FXML
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/spring26/section2/group15/importer/tabassum/Login.fxml"));
-            Parent root = loader.load();
-
-            // Get the current stage from the button click event
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            stage.close();
 
-            // Switch to Log in scene
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("Login");
-            stage.show();
-
-            System.out.println("Logged out. Redirected to Login screen.");
-
-        } catch (IOException e) {
-            System.out.println("ERROR: Login.fxml not found. Check the file path.");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    "/com/spring26/section2/group15/importer/tabassum/user3dashboard.fxml"
+            ));
+            Parent root = loader.load();
+            Stage newStage = new Stage();
+            newStage.setTitle("Dashboard");
+            newStage.setScene(new Scene(root));
+            newStage.show();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    // ─── NO Button → Go back to Accountant Dashboard ─────────────
-
+    @javafx.fxml.FXML
     public void NoButton(ActionEvent actionEvent) {
-        try {
-            // Load the Accountant Dashboard FXML
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/spring26/section2/group15/importer/tabassum/AccountantDashboard.fxml"));
-            Parent root = loader.load();
-
-            // Get the current stage
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-            // Switch to Dashboard scene
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.setTitle("Accountant Dashboard");
-            stage.show();
-
-            System.out.println("Logout cancelled. Back to Dashboard.");
-
-        } catch (IOException e) {
-            System.out.println("ERROR: AccountantDashboard.fxml not found. Check the file path.");
-            e.printStackTrace();
-        }
+        // Just close the logout dialog — do nothing else
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.close();
     }
 }

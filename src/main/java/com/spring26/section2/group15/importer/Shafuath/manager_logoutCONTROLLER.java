@@ -1,40 +1,39 @@
 package com.spring26.section2.group15.importer.Shafuath;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.scene.control.Button;
-import javafx.event.ActionEvent;
+import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class manager_logoutCONTROLLER implements Initializable {
+public class manager_logoutCONTROLLER {
 
     @FXML
     private Button logoutBtn;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Nothing to initialize for this simple screen
-    }
-
-    // Called when the Logout button is clicked
     @FXML
     private void logoutBtn(ActionEvent event) {
         try {
-            // Close the current window
             Stage currentStage = (Stage) logoutBtn.getScene().getWindow();
             currentStage.close();
 
-            // Load the Login screen
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/spring26/section2/group15/importer/Shafuath/login.fxml"));
+            //  Goes back to the Inventory Dashboard (your current start screen)
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    "/com/spring26/section2/group15/importer/Arpita/user3-InventorydDashboard.fxml"
+            ));
             Parent root = loader.load();
 
-            Stage loginStage = new Stage();
-            loginStage.setTitle("Login");
-            loginStage.setScene(new Scene(root));
+            Stage newStage = new Stage();
+            newStage.setTitle("Dashboard");
+            newStage.setScene(new Scene(root));
+            newStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Error loading dashboard screen.");
+        }
+    }
+}
+

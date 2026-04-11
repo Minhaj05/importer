@@ -1,6 +1,6 @@
 package com.spring26.section2.group15.importer.Shafuath;
 
-import com.spring26.section2.group15.importer.Shafuath.model.com.spring26.section2.group15.importer.Shafuath.model.User;
+import com.spring26.section2.group15.importer.Shafuath.model.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
