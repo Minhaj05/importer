@@ -19,6 +19,6 @@
          </font>
       </Label>
       <Button layoutX="148.0" layoutY="212.0" mnemonicParsing="false" onAction="#YesButton" text="Yes" />
-      <Button fx:id="AccountantLogoutLB" layoutX="301.0" layoutY="212.0" mnemonicParsing="false" onAction="#NoButton" text="No" />
+      <Button fx:id="AccountantLogoutLBL" layoutX="301.0" layoutY="212.0" mnemonicParsing="false" onAction="#NoButton" text="No" />
    </children>
 </AnchorPane>
