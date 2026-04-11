@@ -1,30 +1,97 @@
 package com.spring26.section2.group15.importer.tabassum;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class view_import_historycontroller
-{
-    @javafx.fxml.FXML
-    private TableColumn StatusTC;
-    @javafx.fxml.FXML
-    private TableColumn IdTC;
-    @javafx.fxml.FXML
-    private TableColumn QuantityTC;
-    @javafx.fxml.FXML
-    private TableColumn SourceTC;
-    @javafx.fxml.FXML
-    private TableColumn DateTC;
-    @javafx.fxml.FXML
-    private TableView importHistoryTV;
+public class view_import_historycontroller {
 
-    @javafx.fxml.FXML
+    @FXML
+    private TableColumn<ImportHistory, Integer> IdTC;
+    @FXML
+    private TableColumn<ImportHistory, String> SourceTC;
+    @FXML
+    private TableColumn<ImportHistory, Integer> QuantityTC;
+    @FXML
+    private TableColumn<ImportHistory, String> DateTC;
+    @FXML
+    private TableColumn<ImportHistory, String> StatusTC;
+    @FXML
+    private TableView<ImportHistory> importHistoryTV;
+
+    // ✅ Sample data list
+    private ObservableList<ImportHistory> dataList = FXCollections.observableArrayList();
+
+    @FXML
     public void initialize() {
+        // ✅ Link each column to the ImportHistory model fields
+        IdTC.setCellValueFactory(new PropertyValueFactory<>("id"));
+        SourceTC.setCellValueFactory(new PropertyValueFactory<>("source"));
+        QuantityTC.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+        DateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
+        StatusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
+
+        // ✅ Add some sample data to see in the table
+        dataList.add(new ImportHistory(1, "Supplier A", 100, "2025-01-10", "Completed"));
+        dataList.add(new ImportHistory(2, "Supplier B", 50,  "2025-02-15", "Pending"));
+        dataList.add(new ImportHistory(3, "Supplier C", 200, "2025-03-20", "Completed"));
+
+        // ✅ Set data into the TableView
+        importHistoryTV.setItems(dataList);
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void viewDetailsButton(ActionEvent actionEvent) {
+        // ✅ Get the selected row from the table
+        ImportHistory selected = importHistoryTV.getSelectionModel().getSelectedItem();
+
+        if (selected != null) {
+            // Show details in an alert popup
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Import Details");
+            alert.setHeaderText("Selected Import Record");
+            alert.setContentText(
+                    "ID       : " + selected.getId() + "\n" +
+                            "Source   : " + selected.getSource() + "\n" +
+                            "Quantity : " + selected.getQuantity() + "\n" +
+                            "Date     : " + selected.getDate() + "\n" +
+                            "Status   : " + selected.getStatus()
+            );
+            alert.showAndWait();
+        } else {
+            // Show warning if nothing is selected
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("No Selection");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select a row to view details.");
+            alert.showAndWait();
+        }
+    }
+
+    // ✅ Inner Model Class — holds data for each row
+    public static class ImportHistory {
+        private int id;
+        private String source;
+        private int quantity;
+        private String date;
+        private String status;
+
+        public ImportHistory(int id, String source, int quantity, String date, String status) {
+            this.id = id;
+            this.source = source;
+            this.quantity = quantity;
+            this.date = date;
+            this.status = status;
+        }
+
+        // Getters — required by PropertyValueFactory
+        public int getId()         { return id; }
+        public String getSource()  { return source; }
+        public int getQuantity()   { return quantity; }
+        public String getDate()    { return date; }
+        public String getStatus()  { return status; }
     }
 }
