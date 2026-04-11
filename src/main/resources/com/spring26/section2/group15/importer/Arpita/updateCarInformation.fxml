@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.*?>
 
+<AnchorPane prefHeight="514.0" prefWidth="672.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.spring26.section2.group15.importer.Arpita.updateCarInformationController">
 
-<AnchorPane prefHeight="514.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Arpita.updateCarInformationController">
-   <children>
-      <Text layoutX="208.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Car Information" wrappingWidth="299.3529052734375">
-         <font>
-            <Font name="System Bold Italic" size="24.0" />
-         </font>
-      </Text>
-      <TableView fx:id="carListTV" layoutX="22.0" layoutY="96.0" prefHeight="200.0" prefWidth="638.0">
-        <columns>
-          <TableColumn fx:id="carIDTC" prefWidth="75.0" text="CarID" />
-          <TableColumn fx:id="brandTC" prefWidth="75.0" text="Brand" />
-            <TableColumn fx:id="modelTC" prefWidth="75.0" text="Model" />
-            <TableColumn fx:id="yearTC" prefWidth="75.0" text="Year" />
-            <TableColumn fx:id="engineccTC" prefWidth="75.0" text="Engine CC" />
-            <TableColumn fx:id="priceTC" prefWidth="75.0" text="Price" />
-            <TableColumn fx:id="mileageTC" prefWidth="80.00006103515625" text="Mileage" />
-            <TableColumn fx:id="statusTC" prefWidth="106.39996337890625" text="Status" />
-        </columns>
-      </TableView>
-      <Label layoutX="43.0" layoutY="316.0" text="Brand" />
-      <Label layoutX="41.0" layoutY="358.0" prefHeight="18.0" prefWidth="50.0" text="Model" />
-      <Label layoutX="45.0" layoutY="400.0" prefHeight="18.0" prefWidth="42.0" text="Price" />
-      <TextField fx:id="brand" layoutX="106.0" layoutY="312.0" />
-      <TextField layoutX="107.0" layoutY="355.0" onAction="#modelButton" />
-      <TextField layoutX="107.0" layoutY="397.0" onAction="#priceButton" />
-      <Button layoutX="387.0" layoutY="444.0" mnemonicParsing="false" onAction="#updateButton" text="Update" />
-      <Button layoutX="500.0" layoutY="444.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
-   </children>
+    <children>
+
+        <Text layoutX="180.0" layoutY="50.0" text="Update Car Information">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Text>
+
+        <TableView fx:id="carListTV" layoutX="20.0" layoutY="90.0" prefHeight="200.0" prefWidth="630.0">
+            <columns>
+                <TableColumn fx:id="brandTC" text="Brand" prefWidth="100"/>
+                <TableColumn fx:id="modelTC" text="Model" prefWidth="100"/>
+                <TableColumn fx:id="priceTC" text="Price" prefWidth="100"/>
+            </columns>
+        </TableView>
+
+        <Label layoutX="50" layoutY="320" text="Brand"/>
+        <Label layoutX="50" layoutY="360" text="Model"/>
+        <Label layoutX="50" layoutY="400" text="Price"/>
+
+        <TextField fx:id="brandTF" layoutX="120" layoutY="315"/>
+        <TextField fx:id="modelTF" layoutX="120" layoutY="355"/>
+        <TextField fx:id="priceTF" layoutX="120" layoutY="395"/>
+
+        <Button layoutX="350" layoutY="450" text="Update" onAction="#updateButton"/>
+        <Button layoutX="470" layoutY="450" text="Back" onAction="#backButton"/>
+
+    </children>
 </AnchorPane>

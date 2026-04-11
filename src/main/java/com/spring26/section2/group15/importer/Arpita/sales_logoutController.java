@@ -1,22 +1,27 @@
-package com.example.reconditionedcarimporter;
+package com.spring26.section2.group15.importer.Arpita;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class sales_logoutController
-{
-    @javafx.fxml.FXML
+public class sales_logoutController {
+
+    @FXML
     private Label logoutLable;
 
-    @javafx.fxml.FXML
-    public void initialize() {
+    @FXML
+    public void logoutButton(ActionEvent event) {
+        SceneSwitcher.switchScene(event,
+                "/com/spring26/section2/group15/importer/Arpita/login.fxml");
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
+    public void cancelButton(ActionEvent event) {
+        SceneSwitcher.switchScene(event,
+                "/com/spring26/section2/group15/importer/Arpita/sales-dashboard.fxml");
+    }
+
+    @FXML
     public void cancleButton(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void logoutButton(ActionEvent actionEvent) {
     }
 }
