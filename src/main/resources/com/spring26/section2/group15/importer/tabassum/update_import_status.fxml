@@ -12,14 +12,14 @@
    <children>
       <TableView fx:id="UpdateImportStatusTV" layoutX="197.0" layoutY="116.0" prefHeight="200.0" prefWidth="343.0">
         <columns>
-          <TableColumn fx:id="PendingTC" prefWidth="107.20001983642578" text="Pending" />
-          <TableColumn fx:id="ShippedTC" prefWidth="100.0" text="Shipped" />
-            <TableColumn fx:id="CompletedTC" prefWidth="134.3999816894531" text="Completed" />
+          <TableColumn fx:id="ImportIdTC" prefWidth="107.20001983642578" text="Import ID" />
+          <TableColumn fx:id="itemNameTC" prefWidth="100.0" text=" Item Name " />
+            <TableColumn fx:id="StatusTC" prefWidth="134.3999816894531" text="Status    " />
         </columns>
       </TableView>
       <Label fx:id="StatusCB" layoutX="32.0" layoutY="59.0" text="Status:" />
       <Button layoutX="486.0" layoutY="344.0" mnemonicParsing="false" onAction="#UpdateButton" text="Update" />
-      <ComboBox layoutX="32.0" layoutY="90.0" prefWidth="150.0" />
+      <ComboBox fx:id="StatusComboBox" layoutX="32.0" layoutY="90.0" prefWidth="150.0" />
       <Label fx:id="UpdateImportStatusLBL" layoutX="205.0" layoutY="14.0" text="Update Import Status" textFill="#406b81">
          <font>
             <Font name="Britannic Bold" size="22.0" />
