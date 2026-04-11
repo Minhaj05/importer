@@ -1,14 +1,16 @@
-package com.example.reconditionedcarimporter;
+package com.spring26.section2.group15.importer.Arpita;
 
 import java.io.Serializable;
 
 public class car implements Serializable {
+
     private int carID;
     private String brand;
     private String model;
     private int year;
     private double price;
     private String status;
+
 
     public car(int carID, String brand, String model, int year, String status, double price) {
         this.carID = carID;
@@ -18,6 +20,20 @@ public class car implements Serializable {
         this.status = status;
         this.price = price;
     }
+
+
+    public car(String brand, String model, int year, double price) {
+        this.carID = (int)(Math.random() * 10000); // auto ID
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.price = price;
+        this.status = "Available";
+    }
+
+
+    public car() {}
+
 
     public int getCarID() {
         return carID;
