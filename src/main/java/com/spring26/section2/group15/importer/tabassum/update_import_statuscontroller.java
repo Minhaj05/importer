@@ -19,10 +19,10 @@ public class update_import_statuscontroller {
     @FXML
     private TableView<ImportOrder> UpdateImportStatusTV;
     @FXML
-    private ComboBox<String> StatusComboBox;
+    private ComboBox<String>StatusComboBox;
 
     @FXML
-    private javafx.scene.control.ComboBox<String> StatusComboBox;
+    private javafx.scene.control.ComboBox<String>StatusComboBox;
     @FXML
     private Label UpdateImportStatusLBL;
 

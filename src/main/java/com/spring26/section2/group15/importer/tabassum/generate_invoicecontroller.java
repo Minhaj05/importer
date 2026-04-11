@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.collections.FXCollections;
 
-public class generate_invoicecontroller {
+public class  generate_invoicecontroller {
 
     @FXML private TableView<String> GenerateInvoiceTV;
     @FXML private TableColumn<String, String> SaleIdTC;
