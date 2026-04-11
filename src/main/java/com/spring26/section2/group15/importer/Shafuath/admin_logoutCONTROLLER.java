@@ -1,7 +1,10 @@
 package com.spring26.section2.group15.importer.Shafuath;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class admin_logoutCONTROLLER {
 
@@ -9,14 +12,24 @@ public class admin_logoutCONTROLLER {
     private Label messageLabel;
 
     // 🔴 YES BUTTON (Logout)
+
     @FXML
-    private void yesBtn() {
+    private void yesBtn(ActionEvent event) {
+        try {
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.close();
 
-        // 🟢 Show logout message
-        messageLabel.setText("Logged out successfully ✅");
-
-        // 🔵 You can later add scene switching here
-        System.out.println("User logged out");
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(
+                    "/com/spring26/section2/group15/importer/Arpita/user3-InventorydDashboard.fxml"
+            ));
+            javafx.scene.Parent root = loader.load();
+            Stage newStage = new Stage();
+            newStage.setTitle("Dashboard");
+            newStage.setScene(new javafx.scene.Scene(root));
+            newStage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     // 🟡 NO BUTTON (Cancel)
