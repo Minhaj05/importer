@@ -1,24 +1,18 @@
 package com.spring26.section2.group15.importer.Shafuath;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class manager_priceCONTROLLER
-{
-    @javafx.fxml.FXML
-    private ComboBox carSelect;
-    @javafx.fxml.FXML
-    private TextField priceField;
-    @javafx.fxml.FXML
-    private Label statusLabel;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    @javafx.fxml.FXML
-    public void initialize() {
-    }
+public class manager_priceCONTROLLER implements Initializable {
 
-    @javafx.fxml.FXML
-    public void approveBtn(ActionEvent actionEvent) {
-    }
-}
+    @FXML
+    private ComboBox<String> carSelect;

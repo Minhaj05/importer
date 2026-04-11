@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="510.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.spring26.section2.group15.importer.Arpita.salesExecutiveController">
+   <children>
+      <Label layoutX="229.0" layoutY="29.0" text="Sales Executive Dashboard">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="55.0" layoutY="64.0" prefHeight="427.0" prefWidth="234.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#registerCustomerButton" prefHeight="26.0" prefWidth="237.0" text="Register Customer" />
+            <Button mnemonicParsing="false" onAction="#viewAvailableCarButton" prefHeight="26.0" prefWidth="246.0" text="View Available Cars" />
+            <Button mnemonicParsing="false" onAction="#bookCarButton" prefHeight="26.0" prefWidth="286.0" text="Book Car" />
+            <Button mnemonicParsing="false" onAction="#cancelBookingButton" prefHeight="26.0" prefWidth="255.0" text="Cancel Booking" />
+            <Button mnemonicParsing="false" onAction="#sellCarButton" prefHeight="26.0" prefWidth="249.0" text="Sell Car" />
+            <Button mnemonicParsing="false" onAction="#generateInvoiceButton" prefHeight="26.0" prefWidth="257.0" text="Generate Invoice" />
+            <Button mnemonicParsing="false" onAction="#salesHistoryButton" prefHeight="26.0" prefWidth="243.0" text="Sales History" />
+            <Button mnemonicParsing="false" onAction="#logoutButton" prefHeight="26.0" prefWidth="254.0" text="Logout" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,29 +1,72 @@
-package com.example.reconditionedcarimporter;
+package com.spring26.section2.group15.importer.Arpita;
 
-import javafx.event.ActionEvent;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class viewSalesHistoryController
-{
-    @javafx.fxml.FXML
-    private TableColumn priceTC;
-    @javafx.fxml.FXML
-    private TableColumn carTC;
-    @javafx.fxml.FXML
-    private TableView viewSalesHistoryTV;
-    @javafx.fxml.FXML
-    private TableColumn customerTC;
-    @javafx.fxml.FXML
-    private TableColumn dateTC;
-    @javafx.fxml.FXML
-    private TableColumn invoiceIDTC;
+import java.util.ArrayList;
 
-    @javafx.fxml.FXML
+public class viewSalesHistoryController {
+
+    @FXML
+    private TableView<booking> viewSalesHistoryTV;
+
+    @FXML
+    private TableColumn<booking, String> invoiceIDTC;
+
+    @FXML
+    private TableColumn<booking, String> customerTC;
+
+    @FXML
+    private TableColumn<booking, String> carTC;
+
+    @FXML
+    private TableColumn<booking, String> dateTC;
+
+    @FXML
+    private TableColumn<booking, Double> priceTC;
+
+    @FXML
     public void initialize() {
+
+        ArrayList<booking> bookingList = FileHelper.loadBookings();
+        ArrayList<car> carList = FileHelper.loadCars();
+
+
+        invoiceIDTC.setCellValueFactory(new PropertyValueFactory<>("invoiceID"));
+        customerTC.setCellValueFactory(new PropertyValueFactory<>("customerName"));
+        carTC.setCellValueFactory(new PropertyValueFactory<>("carModel"));
+        dateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
+
+
+        priceTC.setCellValueFactory(cellData -> {
+            booking b = cellData.getValue();
+
+            for (car c : carList) {
+                if (c.getModel().equals(b.getCarModel())) {
+                    return new javafx.beans.property.SimpleDoubleProperty(c.getPrice()).asObject();
+                }
+            }
+            return new javafx.beans.property.SimpleDoubleProperty(0).asObject();
+        });
+
+
+        ArrayList<booking> soldList = new ArrayList<>();
+
+        for (booking b : bookingList) {
+            if (b.getStatus().equalsIgnoreCase("Sold")) {
+                soldList.add(b);
+            }
+        }
+
+
+        viewSalesHistoryTV.getItems().clear();
+        viewSalesHistoryTV.getItems().addAll(soldList);
     }
 
-    @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) {
+    @FXML
+    public void backButton(javafx.event.ActionEvent event) {
+        SceneSwitcher.switchScene(event,
+                "/com/spring26/section2/group15/importer/Arpita/salesExecutiveDashboard.fxml");
     }
 }
