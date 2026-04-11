@@ -9,40 +9,28 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class verify_paymentcontroller {
 
-    @FXML
     private TableColumn<Payment, Integer> PaymentIdTC;
-    @FXML
     private TableColumn<Payment, String> CustomerTC;
-    @FXML
     private TableColumn<Payment, Double> AmountTC;
-    @FXML
     private TableColumn<Payment, String> StatusTC;
-    @FXML
     private TableView<Payment> VerifyPaymentTV;
 
-    // ✅ List to hold table data
     private ObservableList<Payment> dataList = FXCollections.observableArrayList();
 
-    @FXML
     public void initialize() {
-        // ✅ Link columns to model fields
         PaymentIdTC.setCellValueFactory(new PropertyValueFactory<>("paymentId"));
         CustomerTC.setCellValueFactory(new PropertyValueFactory<>("customer"));
         AmountTC.setCellValueFactory(new PropertyValueFactory<>("amount"));
         StatusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // ✅ Sample data to show in table
         dataList.add(new Payment(101, "Alice",   500.00, "Pending"));
         dataList.add(new Payment(102, "Bob",     750.50, "Pending"));
         dataList.add(new Payment(103, "Charlie", 300.00, "Verified"));
 
-        // ✅ Load data into TableView
         VerifyPaymentTV.setItems(dataList);
     }
 
-    @FXML
     public void VerifyButton(ActionEvent actionEvent) {
-        // ✅ Get selected row
         Payment selected = VerifyPaymentTV.getSelectionModel().getSelectedItem();
 
         if (selected == null) {
@@ -65,7 +53,6 @@ public class verify_paymentcontroller {
             return;
         }
 
-        // ✅ Update status to Verified
         selected.setStatus("Verified");
 
         // Refresh the table to show updated status
@@ -85,7 +72,6 @@ public class verify_paymentcontroller {
         alert.showAndWait();
     }
 
-    // ✅ Model class — one object = one row in the table
     public static class Payment {
         private int paymentId;
         private String customer;

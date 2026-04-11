@@ -9,43 +9,30 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class view_import_historycontroller {
 
-    @FXML
     private TableColumn<ImportHistory, Integer> IdTC;
-    @FXML
     private TableColumn<ImportHistory, String> SourceTC;
-    @FXML
     private TableColumn<ImportHistory, Integer> QuantityTC;
-    @FXML
     private TableColumn<ImportHistory, String> DateTC;
-    @FXML
     private TableColumn<ImportHistory, String> StatusTC;
-    @FXML
     private TableView<ImportHistory> importHistoryTV;
 
-    // ✅ Sample data list
     private ObservableList<ImportHistory> dataList = FXCollections.observableArrayList();
 
-    @FXML
     public void initialize() {
-        // ✅ Link each column to the ImportHistory model fields
         IdTC.setCellValueFactory(new PropertyValueFactory<>("id"));
         SourceTC.setCellValueFactory(new PropertyValueFactory<>("source"));
         QuantityTC.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         DateTC.setCellValueFactory(new PropertyValueFactory<>("date"));
         StatusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // ✅ Add some sample data to see in the table
         dataList.add(new ImportHistory(1, "Supplier A", 100, "2025-01-10", "Completed"));
         dataList.add(new ImportHistory(2, "Supplier B", 50,  "2025-02-15", "Pending"));
         dataList.add(new ImportHistory(3, "Supplier C", 200, "2025-03-20", "Completed"));
 
-        // ✅ Set data into the TableView
         importHistoryTV.setItems(dataList);
     }
 
-    @FXML
     public void viewDetailsButton(ActionEvent actionEvent) {
-        // ✅ Get the selected row from the table
         ImportHistory selected = importHistoryTV.getSelectionModel().getSelectedItem();
 
         if (selected != null) {
@@ -71,7 +58,6 @@ public class view_import_historycontroller {
         }
     }
 
-    // ✅ Inner Model Class — holds data for each row
     public static class ImportHistory {
         private int id;
         private String source;

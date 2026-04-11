@@ -9,47 +9,33 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 public class verify_documentscontroller {
 
-    @FXML
     private TableColumn<Document, Integer> DocumentIdTC;
-    @FXML
     private TableColumn<Document, String> TypeTC;
-    @FXML
     private TableColumn<Document, String> statusTC;
-    @FXML
     private TableView<Document> VerifyDocumentsTV;
-    @FXML
     private ComboBox<String> StatusCB;
-
-    // ✅ Full data list and filtered list
     private ObservableList<Document> allData    = FXCollections.observableArrayList();
     private ObservableList<Document> filterData = FXCollections.observableArrayList();
 
-    @FXML
     public void initialize() {
-        // ✅ Link columns to model fields
         DocumentIdTC.setCellValueFactory(new PropertyValueFactory<>("documentId"));
         TypeTC.setCellValueFactory(new PropertyValueFactory<>("type"));
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        // ✅ Sample data
         allData.add(new Document(1001, "Invoice",       "Pending"));
         allData.add(new Document(1002, "Contract",      "Verified"));
         allData.add(new Document(1003, "Receipt",       "Pending"));
         allData.add(new Document(1004, "Tax Form",      "Rejected"));
         allData.add(new Document(1005, "Import Permit", "Pending"));
 
-        // ✅ Load all data into table
         VerifyDocumentsTV.setItems(allData);
 
-        // ✅ ComboBox options for filtering
         StatusCB.setItems(FXCollections.observableArrayList(
                 "All", "Pending", "Verified", "Rejected"
         ));
         StatusCB.setValue("All"); // default selection
     }
 
-    // ✅ View button — filters table by selected status
-    @FXML
     public void ViewButton(ActionEvent actionEvent) {
         String selected = StatusCB.getValue();
 
@@ -68,8 +54,7 @@ public class verify_documentscontroller {
         }
     }
 
-    // ✅ Confirm button — marks selected row as Verified
-    @FXML
+
     public void confirmButton(ActionEvent actionEvent) {
         Document selected = VerifyDocumentsTV.getSelectionModel().getSelectedItem();
 
@@ -93,7 +78,6 @@ public class verify_documentscontroller {
             return;
         }
 
-        // ✅ Update status to Verified
         selected.setStatus("Verified");
         VerifyDocumentsTV.refresh();
 
@@ -110,7 +94,6 @@ public class verify_documentscontroller {
         alert.showAndWait();
     }
 
-    // ✅ Model class — one object = one row in the table
     public static class Document {
         private int documentId;
         private String type;
