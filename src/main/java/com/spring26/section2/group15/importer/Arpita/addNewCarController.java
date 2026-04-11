@@ -48,7 +48,7 @@ public class addNewCarController
             int year = Integer.parseInt(yearTF.getText());
             double price = Double.parseDouble(priceTF.getText());
 
-            // validation
+
             if (brand.isEmpty() || model.isEmpty()) {
                 showAlert("Error", "Fill all fields!");
                 return;
