@@ -2,6 +2,7 @@ package com.spring26.section2.group15.importer.Minhaj;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 import java.util.Objects;
 
@@ -15,6 +16,8 @@ public class customer_historyCONTROLLER
     private TableColumn catCol;
     @javafx.fxml.FXML
     private TableColumn amountCoil;
+    @javafx.fxml.FXML
+    private TableView carviewlisttable;
 
     @javafx.fxml.FXML
     public void initialize() {

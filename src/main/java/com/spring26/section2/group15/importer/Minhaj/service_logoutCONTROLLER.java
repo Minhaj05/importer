@@ -14,6 +14,7 @@ public class service_logoutCONTROLLER
 
     @javafx.fxml.FXML
     public void YesClick(ActionEvent actionEvent) {
+        SceneSwitcher.go(actionEvent, "service_logout.fxml");
     }
     protected void switchScene(String fxml, javafx.event.ActionEvent event) throws Exception {
         javafx.scene.Parent root = javafx.fxml.FXMLLoader.load(

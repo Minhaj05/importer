@@ -10,6 +10,7 @@ public class Customer_Logout
 
     @javafx.fxml.FXML
     public void yesOnClick(ActionEvent actionEvent) {
+        SceneSwitcher.go(actionEvent, "customer_login.fxml");
     }
 
     @javafx.fxml.FXML

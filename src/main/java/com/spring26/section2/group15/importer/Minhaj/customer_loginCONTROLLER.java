@@ -16,7 +16,14 @@ public class customer_loginCONTROLLER
     }
 
     @javafx.fxml.FXML
-    public void LoginOnClick(ActionEvent actionEvent) {
+    public void LoginOnClick(ActionEvent actionEvent) { String email = emailTextField.getText();
+        String pass = passwordTextField.getText();
+
+        if (email.isEmpty() || pass.isEmpty()) {
+            System.out.println("Email or Password!");
+            return;
+        }
+        SceneSwitcher.go(actionEvent, "customer_view_cars.fxml");
     }
     protected void switchScene(String fxml, javafx.event.ActionEvent event) throws Exception {
         javafx.scene.Parent root = javafx.fxml.FXMLLoader.load(
