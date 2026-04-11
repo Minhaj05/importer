@@ -3,6 +3,8 @@ package com.spring26.section2.group15.importer.Minhaj;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TableColumn;
 
+import java.util.Objects;
+
 public class customer_historyCONTROLLER
 {
     @javafx.fxml.FXML
@@ -23,7 +25,7 @@ public class customer_historyCONTROLLER
     }
     protected void switchScene(String fxml, javafx.event.ActionEvent event) throws Exception {
         javafx.scene.Parent root = javafx.fxml.FXMLLoader.load(
-                getClass().getResource("/view/" + fxml)
+                Objects.requireNonNull(getClass().getResource("/com/spring26/section2/group15/importer/Minhaj/" + fxml))
         );
         javafx.stage.Stage stage =
                 (javafx.stage.Stage) ((javafx.scene.control.Button) event.getSource())
