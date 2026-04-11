@@ -80,7 +80,7 @@ public class cancelBookingController {
     @FXML
     public void backButton(ActionEvent event) {
         SceneSwitcher.switchScene(event,
-                "/com/spring26/section2/group15/importer/Arpita/sales-dashboard.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/salesExecutiveDashboard.fxml");
     }
 
 
@@ -92,7 +92,5 @@ public class cancelBookingController {
         alert.showAndWait();
     }
 
-    @FXML
-    public void cancleBookingButton(ActionEvent actionEvent) {
-    }
+
 }

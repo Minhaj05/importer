@@ -3,7 +3,6 @@ package com.spring26.section2.group15.importer.Arpita;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -68,7 +67,7 @@ public class searchCarController
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent,
-                "/com/spring26/section2/group15/importer/Arpita/user3-dashboard.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/user3InventorydDashboard.fxml");
 
     }
 }

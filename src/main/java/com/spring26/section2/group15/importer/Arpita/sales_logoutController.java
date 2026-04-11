@@ -18,10 +18,8 @@ public class sales_logoutController {
     @Deprecated
     public void cancelButton(ActionEvent event) {
         SceneSwitcher.switchScene(event,
-                "/com/spring26/section2/group15/importer/Arpita/sales-dashboard.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/salesExecutiveDashboard.fxml");
     }
 
-    @FXML
-    public void cancleButton(ActionEvent actionEvent) {
-    }
+
 }
