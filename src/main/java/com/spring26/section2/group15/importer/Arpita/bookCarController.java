@@ -92,7 +92,7 @@ public class bookCarController {
 
     @FXML
     public void backButton(ActionEvent event) {
-        SceneSwitcher.switchScene(event, "/com/spring26/section2/group15/importer/Arpita/sales-dashboard.fxml");
+        SceneSwitcher.switchScene(event, "/com/spring26/section2/group15/importer/Arpita/salesExecutiveDashboard.fxml");
     }
 
 

@@ -1,7 +1,6 @@
 package com.spring26.section2.group15.importer.Arpita;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -37,7 +36,7 @@ public class addNewCarController
     @javafx.fxml.FXML
     public void goBackButton(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent,
-                "/com/spring26/section2/group15/importer/Arpita/user3-InventoryDashboard.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/user3InventorydDashboard.fxml");
     }
 
     @javafx.fxml.FXML

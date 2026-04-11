@@ -67,6 +67,6 @@ public class viewSalesHistoryController {
     @FXML
     public void backButton(javafx.event.ActionEvent event) {
         SceneSwitcher.switchScene(event,
-                "/com/spring26/section2/group15/importer/Arpita/sales-dashboard.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/salesExecutiveDashboard.fxml");
     }
 }

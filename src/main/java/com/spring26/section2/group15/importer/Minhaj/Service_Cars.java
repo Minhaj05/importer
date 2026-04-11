@@ -1,7 +1,5 @@
 package com.spring26.section2.group15.importer.Minhaj;
 
-import com.spring26.section2.group15.importer.Shafuath.model.com.spring26.section2.group15.importer.Shafuath.model.Car;
-
 import java.time.LocalDate;
 
 public class Service_Cars {

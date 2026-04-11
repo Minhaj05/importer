@@ -66,7 +66,7 @@ public class updateCarStatusController {
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent,
-                "/com/spring26/section2/group15/importer/Arpita/user3-dashboard.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/user3InventorydDashboard.fxml");
     }
     private void showAlert(String title, String msg) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

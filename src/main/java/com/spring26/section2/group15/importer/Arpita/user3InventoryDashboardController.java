@@ -12,19 +12,19 @@ public class user3InventoryDashboardController
     @javafx.fxml.FXML
     public void updateStatusButton(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent,
-                "/com/spring26/section2/group15/importer/Arpita/update_status.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/updateCarStatus.fxml");
     }
 
     @javafx.fxml.FXML
     public void viewInventoryButton(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent,
-                "/com/spring26/section2/group15/importer/Arpita/view_inventory.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/viewInventoryList.fxml");
     }
 
     @javafx.fxml.FXML
     public void generateReportButton(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent,
-                "/com/spring26/section2/group15/importer/Arpita/inventory_report.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/generateInventoryReport.fxml");
 
     }
 
@@ -44,13 +44,13 @@ public class user3InventoryDashboardController
     @javafx.fxml.FXML
     public void updateCarButton(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent,
-                "/com/spring26/section2/group15/importer/Arpita/update_car.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/updateCarInformation.fxml");
     }
 
     @javafx.fxml.FXML
     public void deleteCarButton(ActionEvent actionEvent) {
         SceneSwitcher.switchScene(actionEvent,
-                "/com/spring26/section2/group15/importer/Arpita/delete_car.fxml");
+                "/com/spring26/section2/group15/importer/Arpita/deleteCarRecord.fxml");
     }
 
     @javafx.fxml.FXML
