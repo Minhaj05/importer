@@ -10,13 +10,20 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class update_import_statuscontroller {
 
 
+    @FXML
     private TableColumn<ImportOrder, String> ImportIdTC;
+    @FXML
     private TableColumn<ImportOrder, String> itemNameTC;
+    @FXML
     private TableColumn<ImportOrder, String> StatusTC;
+    @FXML
     private TableView<ImportOrder> UpdateImportStatusTV;
-    private ComboBox<String> StatusComboBox;
+    @FXML
+    private ComboBox<String>StatusComboBox;
 
-    private Label StatusCB; // Label in FXML (kept as-is)
+    @FXML
+    private javafx.scene.control.ComboBox<String>StatusComboBox;
+    @FXML
     private Label UpdateImportStatusLBL;
 
     private ObservableList<ImportOrder> dataList = FXCollections.observableArrayList();
@@ -40,6 +47,7 @@ public class update_import_statuscontroller {
         StatusComboBox.setValue("Pending"); // default
     }
 
+    @FXML
     public void UpdateButton(ActionEvent actionEvent) {
         ImportOrder selected = UpdateImportStatusTV.getSelectionModel().getSelectedItem();
 

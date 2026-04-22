@@ -1,4 +1,4 @@
-package com.spring26.section2.group15.importer.Shafuath.model.com.spring26.section2.group15.importer.Shafuath.model;
+package com.spring26.section2.group15.importer.Shafuath.model;
 
 public class Employee {
 
