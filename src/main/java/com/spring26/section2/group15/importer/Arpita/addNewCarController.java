@@ -52,6 +52,7 @@ public class addNewCarController
                 showAlert("Error", "Fill all fields!");
                 return;
             }
+            int nextId = carList.size() + 1;
 
             car newCar = new car();
             newCar.setBrand(brand);
@@ -62,7 +63,7 @@ public class addNewCarController
 
             carList.add(newCar);
 
-            FileHelper.saveCars(carList);
+            FileHelper.saveCar(newCar);
 
             showAlert("Success", "Car Added!");
 

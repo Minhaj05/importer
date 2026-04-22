@@ -2,15 +2,14 @@ package com.spring26.section2.group15.importer.Arpita;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
-
 import java.util.ArrayList;
 
 public class bookCarController {
 
     @FXML
     private ComboBox<String> customerComboBox;
-
     @FXML
     private ComboBox<String> carComboBox;
 
@@ -18,89 +17,72 @@ public class bookCarController {
     private ArrayList<car> carList;
     private ArrayList<booking> bookingList;
 
-
     @FXML
     public void initialize() {
+
         customerList = FileHelper.loadCustomers();
         carList = FileHelper.loadCars();
         bookingList = FileHelper.loadBookings();
 
-        if (customerList == null) customerList = new ArrayList<>();
-        if (carList == null) carList = new ArrayList<>();
-        if (bookingList == null) bookingList = new ArrayList<>();
-
-
-        if (customerList.isEmpty()) {
-            customerList.add(new customer("Arpita", "01711111111", "Dhaka"));
-            customerList.add(new customer("Rahim", "01822222222", "CTG"));
-        }
-
-        if (carList.isEmpty()) {
-            carList.add(new car("Toyota", "Axio", 2020, 1500000));
-            carList.add(new car("Honda", "Civic", 2021, 2000000));
-        }
-
         customerComboBox.getItems().clear();
         carComboBox.getItems().clear();
+
 
         for (customer c : customerList) {
             customerComboBox.getItems().add(c.getName());
         }
 
+
         for (car c : carList) {
-            if (c.getStatus().equalsIgnoreCase("Available")) {
+            if ("Available".equalsIgnoreCase(c.getStatus())) {
                 carComboBox.getItems().add(c.getModel());
             }
         }
     }
 
-
     @FXML
     public void bookButton(ActionEvent event) {
-
         String selectedCustomer = customerComboBox.getValue();
-        String selectedCar = carComboBox.getValue();
+        String selectedCarModel = carComboBox.getValue();
 
-        if (selectedCustomer == null || selectedCar == null) {
-            showAlert("Error", "Select customer and car!");
+        if (selectedCustomer == null || selectedCarModel == null) {
+            showAlert("Error", "Please select both Customer and Car!");
             return;
         }
 
-        int id = bookingList.size() + 1;
+
+        int nextId = bookingList.size() + 1;
+        booking newBooking = new booking(nextId, selectedCustomer, selectedCarModel, "Booked");
+
+
+        FileHelper.saveBooking(newBooking);
+
 
         for (car c : carList) {
-            if (c.getModel().equals(selectedCar)) {
-
-
+            if (c.getModel().equals(selectedCarModel)) {
                 c.setStatus("Reserved");
-
-
-                booking b = new booking(id, selectedCustomer, selectedCar, "Booked");
-                bookingList.add(b);
-
                 break;
             }
         }
 
 
-        FileHelper.saveBookings(bookingList);
-        FileHelper.saveCars(carList);
+        FileHelper.saveAllCars(carList);
 
-        showAlert("Success", "Car booked successfully!");
+        showAlert("Success", "Car Reserved successfully!");
+
+        // বুকিং হয়ে গেলে গাড়িটি লিস্ট থেকে সরিয়ে ফেলা (UI আপডেট)
+        carComboBox.getItems().remove(selectedCarModel);
     }
-
 
     @FXML
     public void backButton(ActionEvent event) {
         SceneSwitcher.switchScene(event, "/com/spring26/section2/group15/importer/Arpita/salesExecutiveDashboard.fxml");
     }
 
-
     private void showAlert(String title, String msg) {
-        javafx.scene.control.Alert alert =
-                new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.INFORMATION);
-
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
+        alert.setHeaderText(null);
         alert.setContentText(msg);
         alert.showAndWait();
     }

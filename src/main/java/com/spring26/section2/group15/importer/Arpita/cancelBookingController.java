@@ -1,33 +1,30 @@
 package com.spring26.section2.group15.importer.Arpita;
 
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.util.ArrayList;
 
 public class cancelBookingController {
 
     @FXML
     private TableColumn<booking, Integer> bookingIDTC;
-
     @FXML
     private TableColumn<booking, String> statusTC;
+    @FXML
+    private TableColumn<booking, String> carModelTC;
+    @FXML
+    private TableColumn<booking, String> customerNameTC;
+    @FXML
+    private TableView<booking> cancleBookingTV;
 
     private ArrayList<booking> bookingList;
     private ArrayList<car> carList;
     @FXML
     private TableColumn bookingDateTC;
-    @FXML
-    private TableColumn carModelTC;
-    @FXML
-    private TableColumn customerNameTC;
-    @FXML
-    private TableView<booking> cancleBookingTV;
-
 
     @FXML
     public void initialize() {
@@ -35,16 +32,14 @@ public class cancelBookingController {
         bookingList = FileHelper.loadBookings();
         carList = FileHelper.loadCars();
 
-
         bookingIDTC.setCellValueFactory(new PropertyValueFactory<>("bookingID"));
         customerNameTC.setCellValueFactory(new PropertyValueFactory<>("customerName"));
         carModelTC.setCellValueFactory(new PropertyValueFactory<>("carModel"));
         statusTC.setCellValueFactory(new PropertyValueFactory<>("status"));
 
 
-        cancleBookingTV.setItems(FXCollections.observableArrayList(bookingList));
+        cancleBookingTV.getItems().addAll(bookingList);
     }
-
 
     @Deprecated
     public void cancelBookingButton(ActionEvent event) {
@@ -64,18 +59,19 @@ public class cancelBookingController {
             }
         }
 
+
         bookingList.remove(selected);
 
 
-        FileHelper.saveBookings(bookingList);
-        FileHelper.saveCars(carList);
+        FileHelper.saveAllBookings(bookingList);
+        FileHelper.saveAllCars(carList);
 
 
-        cancleBookingTV.setItems(FXCollections.observableArrayList(bookingList));
+        cancleBookingTV.getItems().clear();
+        cancleBookingTV.getItems().addAll(bookingList);
 
-        showAlert("Success", "Booking cancelled!");
+        showAlert("Success", "Cancelled!");
     }
-
 
     @FXML
     public void backButton(ActionEvent event) {
@@ -83,13 +79,11 @@ public class cancelBookingController {
                 "/com/spring26/section2/group15/importer/Arpita/salesExecutiveDashboard.fxml");
     }
 
-
     private void showAlert(String title, String msg) {
-        javafx.scene.control.Alert alert =
-                new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
         alert.setContentText(msg);
-        alert.showAndWait();
+        alert.show();
     }
 
 

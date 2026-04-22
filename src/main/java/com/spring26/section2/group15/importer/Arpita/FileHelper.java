@@ -1,71 +1,107 @@
 package com.spring26.section2.group15.importer.Arpita;
 
-import com.spring26.section2.group15.importer.Shafuath.model.com.spring26.section2.group15.importer.Shafuath.model.Car;
-
 import java.io.*;
 import java.util.ArrayList;
 
 public class FileHelper {
 
-    // CAR SAVE
-    public static void saveCars(ArrayList<com.spring26.section2.group15.importer.Arpita.car> list) {
-        try {
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("car.dat"));
-            oos.writeObject(list);
-            oos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+    public static void saveCar(car c) {
+        File f = new File("car.bin");
+        boolean exists = f.exists();
+        try (FileOutputStream fos = new FileOutputStream(f, true);
+             ObjectOutputStream oos = exists ? new AppendableObjectOutputStream(fos) : new ObjectOutputStream(fos)) {
+            oos.writeObject(c);
+        } catch (Exception e) { e.printStackTrace(); }
     }
 
-    // CAR LOAD
+
+    public static void saveCars(ArrayList<car> list) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("car.bin"))) {
+            for (car c : list) {
+                oos.writeObject(c);
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+    }
+
+
+    public static void saveAllCars(ArrayList<car> list) {
+        saveCars(list);
+    }
+
+
     public static ArrayList<car> loadCars() {
-        try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("car.dat"));
-            return (ArrayList<car>) ois.readObject();
-        } catch (Exception e) {
-            return new ArrayList<>();
-        }
+        ArrayList<car> list = new ArrayList<>();
+        File f = new File("car.bin");
+        if (!f.exists()) return list;
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f))) {
+            while (true) {
+                try {
+                    list.add((car) ois.readObject());
+                } catch (EOFException e) { break; }
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+        return list;
     }
 
-    // CUSTOMER SAVE
+
     public static void saveCustomers(ArrayList<customer> list) {
-        try {
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("customer.dat"));
-            oos.writeObject(list);
-            oos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("customer.bin"))) {
+            for (customer c : list) {
+                oos.writeObject(c);
+            }
+        } catch (Exception e) { e.printStackTrace(); }
     }
 
-    // CUSTOMER LOAD
     public static ArrayList<customer> loadCustomers() {
-        try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("customer.dat"));
-            return (ArrayList<customer>) ois.readObject();
-        } catch (Exception e) {
-            return new ArrayList<>();
-        }
-    }
-    // BOOKING SAVE
-    public static void saveBookings(ArrayList<booking> list) {
-        try {
-            ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("booking.dat"));
-            oos.writeObject(list);
-            oos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        ArrayList<customer> list = new ArrayList<>();
+        File f = new File("customer.bin");
+        if (!f.exists()) return list;
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f))) {
+            while (true) {
+                try {
+                    list.add((customer) ois.readObject());
+                } catch (EOFException e) { break; }
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+        return list;
     }
 
-    // BOOKING LOAD
+
+    public static void saveBooking(booking b) {
+        File f = new File("booking.bin");
+        boolean exists = f.exists();
+        try (FileOutputStream fos = new FileOutputStream(f, true);
+             ObjectOutputStream oos = exists ? new AppendableObjectOutputStream(fos) : new ObjectOutputStream(fos)) {
+            oos.writeObject(b);
+        } catch (Exception e) { e.printStackTrace(); }
+    }
+
+
+    public static void saveBookings(ArrayList<booking> list) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("booking.bin"))) {
+            for (booking b : list) {
+                oos.writeObject(b);
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+    }
+
+
+    public static void saveAllBookings(ArrayList<booking> list) {
+        saveBookings(list);
+    }
+
     public static ArrayList<booking> loadBookings() {
-        try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("booking.dat"));
-            return (ArrayList<booking>) ois.readObject();
-        } catch (Exception e) {
-            return new ArrayList<>();
-        }
+        ArrayList<booking> list = new ArrayList<>();
+        File f = new File("booking.bin");
+        if (!f.exists()) return list;
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f))) {
+            while (true) {
+                try {
+                    list.add((booking) ois.readObject());
+                } catch (EOFException e) { break; }
+            }
+        } catch (Exception e) { e.printStackTrace(); }
+        return list;
     }
 }
