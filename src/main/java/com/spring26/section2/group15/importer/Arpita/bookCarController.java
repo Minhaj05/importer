@@ -70,7 +70,7 @@ public class bookCarController {
 
         showAlert("Success", "Car Reserved successfully!");
 
-        // বুকিং হয়ে গেলে গাড়িটি লিস্ট থেকে সরিয়ে ফেলা (UI আপডেট)
+
         carComboBox.getItems().remove(selectedCarModel);
     }
 
