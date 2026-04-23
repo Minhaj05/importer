@@ -35,4 +35,10 @@ public class manager_sale_approvalCONTROLLER implements Initializable {
     private void loadSaleData() {
         ObservableList<SaleRecord> saleList = FXCollections.observableArrayList(
                 // TODO: Replace with real DB query results
-                new SaleRecord("John Doe - Toyota")
+                new SaleRecord("Jesika - Toyota")
+        );
+        saleTable.setText(saleList);
+
+    }
+}
+

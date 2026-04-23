@@ -12,15 +12,15 @@ public class admin_backupCONTROLLER {
     @FXML
     private Label statusLabel;
 
-    // 🔴 BUTTON ACTION (must match FXML: #backupBtn)
+    // BUTTON ACTION (must match FXML: #backupBtn)
     @FXML
     private void backupBtn() {
 
-        // 🟡 Start Backup
+        // Start Backup
         statusLabel.setText("Backup Started...");
         progressBar.setProgress(0.3);
 
-        // 🟢 Simulate process
+        // Simulate process
         try {
             Thread.sleep(500); // delay (simulation)
         } catch (InterruptedException e) {
@@ -36,7 +36,7 @@ public class admin_backupCONTROLLER {
             e.printStackTrace();
         }
 
-        // 🔵 Complete Backup
+        // Complete Backup
         progressBar.setProgress(1.0);
         statusLabel.setText("Backup Completed Successfully ✅");
     }

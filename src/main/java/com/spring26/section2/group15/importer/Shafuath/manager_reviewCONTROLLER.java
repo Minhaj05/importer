@@ -37,11 +37,11 @@ public class manager_reviewCONTROLLER implements Initializable {
     private void loadReviewData() {
         ObservableList<EmployeeReview> reviewList = FXCollections.observableArrayList(
                 // TODO: Replace with real DB query results
-                new EmployeeReview("John Doe - Excellent performance this quarter."),
-                new EmployeeReview("Jane Smith - Needs improvement in punctuality."),
-                new EmployeeReview("Mark Lee - Outstanding sales numbers."),
+                new EmployeeReview("John  - Excellent performance this quarter."),
+                new EmployeeReview("Jane  - Needs improvement in punctuality."),
+                new EmployeeReview("Nusu - Outstanding sales numbers."),
                 new EmployeeReview("Sara Khan - Great team collaboration skills."),
-                new EmployeeReview("Tom Brown - Met all targets successfully.")
+                new EmployeeReview("Tilottoma - Met all targets successfully.")
         );
 
         employeeReviewTableView.setItems(reviewList);
@@ -49,6 +49,15 @@ public class manager_reviewCONTROLLER implements Initializable {
 
     // Called when the Review button is clicked
     @FXML
-    private void reviewBtn(ActionEvent event) {
+    void reviewButton(ActionEvent actionEvent) {
         // Get the selected review from the table
         EmployeeReview selectedReview = employeeReviewTableView.getSelectionModel().getSelectedItem();
+
+        if (selectedReview != null) {
+            System.out.println("Selected: " + selectedReview.getReview());
+        } else {
+            System.out.println("No review selected.");
+        }
+    }
+
+} // This last brace is CRITICAL to close the class

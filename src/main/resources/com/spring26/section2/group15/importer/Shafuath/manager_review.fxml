@@ -19,7 +19,7 @@
           <TableColumn fx:id="employeeTable" prefWidth="600.0" text="Review" />
         </columns>
       </TableView>
-      <Button layoutX="262.0" layoutY="350.0" mnemonicParsing="false" onAction="#reviewBtn" text="Review">
+      <Button layoutX="262.0" layoutY="350.0" mnemonicParsing="false" onAction="#reviewButton" text="Review">
          <font>
             <Font size="17.0" />
          </font>

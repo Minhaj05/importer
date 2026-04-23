@@ -38,10 +38,13 @@ public class manager_summaryCONTROLLER implements Initializable {
         // double rev   = DatabaseHelper.getTotalRevenue();
 
         // Hardcoded sample data for now:
-        int    totalSalesCount   = 120;
-        int    totalCarsCount    = 85;
-        double totalRevenue      = 3_750_000.00;
+        int totalSalesCount = 120;
+        int totalCarsCount = 85;
+        double totalRevenue = 3_750_000.00;
 
         // Update the labels with fetched data
         totalSales.setText("Total Sales  :  " + totalSalesCount + " sales");
-        totalCars.setText( "Total Cars   :  " + totalCarsCount  + " cars");
+        totalCars.setText("Total Cars   :  " + totalCarsCount + " cars");
+    }
+
+}

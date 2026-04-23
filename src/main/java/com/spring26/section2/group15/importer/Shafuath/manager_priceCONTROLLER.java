@@ -16,3 +16,11 @@ public class manager_priceCONTROLLER implements Initializable {
 
     @FXML
     private ComboBox<String> carSelect;
+    @FXML
+    private TextField priceField;
+    @FXML
+    private Label statusLabel;
+
+    @FXML
+    public void approveBtn(ActionEvent actionEvent) {
+    }
