@@ -41,7 +41,7 @@ public class cancelBookingController {
         cancleBookingTV.getItems().addAll(bookingList);
     }
 
-    @Deprecated
+
     public void cancelBookingButton(ActionEvent event) {
 
         booking selected = cancleBookingTV.getSelectionModel().getSelectedItem();
