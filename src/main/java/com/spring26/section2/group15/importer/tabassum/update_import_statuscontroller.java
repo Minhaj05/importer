@@ -88,6 +88,14 @@ public class update_import_statuscontroller {
         alert.showAndWait();
     }
 
+    public ComboBox<String> getStatusComboBox() {
+        return StatusComboBox;
+    }
+
+    public void setStatusComboBox(ComboBox<String> statusComboBox) {
+        StatusComboBox = statusComboBox;
+    }
+
     public static class ImportOrder {
         private String importId;
         private String itemName;

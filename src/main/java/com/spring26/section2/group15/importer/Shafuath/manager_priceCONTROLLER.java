@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class manager_priceCONTROLLER implements Initializable {
+public abstract class manager_priceCONTROLLER implements Initializable {
 
     @FXML
     private ComboBox<String> carSelect;
@@ -24,3 +24,4 @@ public class manager_priceCONTROLLER implements Initializable {
     @FXML
     public void approveBtn(ActionEvent actionEvent) {
     }
+}

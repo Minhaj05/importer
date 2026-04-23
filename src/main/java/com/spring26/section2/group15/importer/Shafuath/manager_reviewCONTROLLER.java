@@ -53,9 +53,8 @@ public class manager_reviewCONTROLLER implements Initializable {
         // Get the selected review from the table
         EmployeeReview selectedReview = employeeReviewTableView.getSelectionModel().getSelectedItem();
 
-        if (selectedReview != null) {
-            System.out.println("Selected: " + selectedReview.getReview());
-        } else {
+        if (selectedReview != null) System.out.println("Selected: " + selectedReview.getReview());
+        else {
             System.out.println("No review selected.");
         }
     }

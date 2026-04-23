@@ -37,7 +37,7 @@ public class manager_sale_approvalCONTROLLER implements Initializable {
                 // TODO: Replace with real DB query results
                 new SaleRecord("Jesika - Toyota")
         );
-        saleTable.setText(saleList);
+        saleTable.setText(saleList.toString());
 
     }
 }

@@ -1,4 +1,5 @@
-module com.spring26.section2.group15.importer {
+///
+module com.spring.section.group.importer {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.base;
