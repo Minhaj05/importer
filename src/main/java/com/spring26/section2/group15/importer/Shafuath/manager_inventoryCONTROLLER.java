@@ -41,6 +41,7 @@ public class manager_inventoryCONTROLLER implements Initializable {
                 new CarModel("Ford Mustang"),
                 new CarModel("BMW 3 Series"),
                 new CarModel("Mercedes C-Class")
+
         );
 
         inventoryTableView.setItems(carList);

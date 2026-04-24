@@ -22,8 +22,6 @@ public class update_import_statuscontroller {
     private ComboBox<String>StatusComboBox;
 
     @FXML
-    private javafx.scene.control.ComboBox<String>StatusComboBox;
-    @FXML
     private Label UpdateImportStatusLBL;
 
     private ObservableList<ImportOrder> dataList = FXCollections.observableArrayList();

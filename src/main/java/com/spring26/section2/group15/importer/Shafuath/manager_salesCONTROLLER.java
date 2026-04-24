@@ -79,11 +79,11 @@ public class manager_salesCONTROLLER implements Initializable {
 
         // Hardcoded sample data for now:
         reportList.addAll(
-                new SalesReport("John Doe - Toyota Corolla - $25,000 - " + from),
-                new SalesReport("Jane Smith - Honda Civic - $28,000 - " + from.plusDays(1)),
-                new SalesReport("Mark Lee - Ford Mustang - $45,000 - " + from.plusDays(2)),
+                new SalesReport("IBRAHIM Pasha - Toyota Corolla - $25,000 - " + from),
+                new SalesReport("Nuzhat Tabassum - Honda Civic - $28,000 - " + from.plusDays(1)),
+                new SalesReport("Tilottoma Tithi - Ford Mustang - $45,000 - " + from.plusDays(2)),
                 new SalesReport("Sara Khan - BMW 3 Series - $55,000 - " + from.plusDays(3)),
-                new SalesReport("Tom Brown - Mercedes C-Class - $60,000 - " + to)
+                new SalesReport("Khondoker Ali - Mercedes C-Class - $60,000 - " + to)
         );
 
         salesReportTableView.setItems(reportList);
